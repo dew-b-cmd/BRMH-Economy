@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>경제 자료 | MICU CLASS</title>
+  <style>
+    :root{color-scheme:light;--ink:#1e352b;--dim:#52655a;--paper:#faf8f0;--line:#d5dfd0;--accent:#285843}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.65 system-ui,"Malgun Gothic",sans-serif}
+    header{background:#fff;border-bottom:1px solid var(--line)}
+    nav{max-width:66rem;margin:auto;padding:.7rem 1.25rem;display:flex;align-items:center;flex-wrap:wrap;gap:.5rem 1.5rem}
+    nav a{font-weight:700;text-decoration:none}
+    nav strong{margin-right:auto;color:var(--accent);letter-spacing:.06em}
+    a{color:var(--accent);text-underline-offset:.2em}
+    a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+    main{max-width:66rem;margin:auto;padding:clamp(1.5rem,6vw,4rem) 1.25rem 3rem}
+    h1,h2,h3{line-height:1.25;margin:0}
+    h1{font-size:clamp(2.4rem,6vw,4.2rem);letter-spacing:-.06em}
+    h2{font-size:1.45rem;letter-spacing:-.03em;margin-bottom:1rem}
+    h3{font-size:1.08rem}
+    p{margin:.5rem 0 0;color:var(--dim)}
+    section{margin-top:2.1rem}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,15rem),1fr));gap:.85rem}
+    article{background:#fff;border:1px solid var(--line);border-radius:.85rem;padding:1rem}
+    article p{font-size:.9375rem}
+    .source{display:block;margin-top:.7rem;font-weight:650}
+    .pricing{padding:1rem 1.15rem;border:1px solid var(--line);border-left:.25rem solid var(--accent);background:#edf2e8;border-radius:.5rem}
+    @media(max-width:28rem){nav{gap:.5rem 1rem}}
+  </style>
+</head>
+<body>
+  <header>
+    <nav aria-label="강의실 메뉴">
+      <strong>MICU CLASS</strong>
+      <a href="index.html">상세 교재</a>
+      <a href="index.html#lesson-strategy">주식투자전략</a>
+    </nav>
+  </header>
+  <main>
+    <h1>경제 자료</h1>
+    <p>이윤희 선생님의 강의 흐름에 따라 공시와 산업 지표를 원문에서 확인합니다.</p>
+    <section aria-labelledby="research">
+      <h2 id="research">공시에서 산업·섹터로</h2>
+      <div class="grid">
+        <article>
+          <h3>기업 공시</h3>
+          <p>최근 분기 매출액·영업이익을 전년 같은 분기와 비교하고 수주잔고의 변화를 봅니다.</p>
+          <a class="source" href="https://dart.fss.or.kr/" target="_blank" rel="noopener noreferrer">금융감독원 DART</a>
+          <a class="source" href="https://www.sec.gov/edgar/search/" target="_blank" rel="noopener noreferrer">미국 SEC EDGAR</a>
+        </article>
+        <article>
+          <h3>산업 지표</h3>
+          <p>같은 품목과 기간의 수출을 비교한 뒤, 산업생산과 금리 흐름을 함께 확인합니다.</p>
+          <a class="source" href="https://tradedata.go.kr/" target="_blank" rel="noopener noreferrer">관세청 수출입무역통계</a>
+          <a class="source" href="https://ecos.bok.or.kr/" target="_blank" rel="noopener noreferrer">한국은행 ECOS</a>
+        </article>
+        <article>
+          <h3>섹터 비교</h3>
+          <p>같은 기간의 지수와 투자자별 거래를 비교하고, 수급과 실적의 방향이 같은지 살펴봅니다.</p>
+          <a class="source" href="https://data.krx.co.kr/" target="_blank" rel="noopener noreferrer">한국거래소 정보데이터시스템</a>
+        </article>
+      </div>
+    </section>
+    <section aria-labelledby="reports">
+      <h2 id="reports">경제·증시 리포트</h2>
+      <div class="grid">
+        <article>
+          <h3>국내 경제</h3>
+          <a class="source" href="https://www.kdi.re.kr/research/monTrends" target="_blank" rel="noopener noreferrer">KDI 월간 경제동향</a>
+          <a class="source" href="https://www.bok.or.kr/portal/bbs/B0000348/list.do?menuNo=201109" target="_blank" rel="noopener noreferrer">한국은행 금융·외환시장 동향</a>
+        </article>
+        <article>
+          <h3>시장과 기업</h3>
+          <a class="source" href="https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm" target="_blank" rel="noopener noreferrer">미국 연준 FOMC 발표</a>
+          <a class="source" href="https://www.fnguide.com/Research/SearchReport" target="_blank" rel="noopener noreferrer">FnGuide 증권사 리포트 검색</a>
+        </article>
+      </div>
+    </section>
+    <section class="pricing" aria-labelledby="prices">
+      <h2 id="prices">NVDA 가격·실적</h2>
+      <p>이 화면에서는 가격과 기업 자료를 원문으로 안내합니다. 예측을 생성하려면 기존 Kronos 앱을 사용합니다.</p>
+      <a class="source" href="https://www.nasdaq.com/market-activity/stocks/nvda/historical" target="_blank" rel="noopener noreferrer">Nasdaq NVDA 일별 시세</a>
+      <a class="source" href="https://investor.nvidia.com/financial-info/financial-reports-and-sec-filings/default.aspx" target="_blank" rel="noopener noreferrer">NVIDIA 실적·공시</a>
+    </section>
+  </main>
+</body>
+</html>
