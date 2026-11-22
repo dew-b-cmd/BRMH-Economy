@@ -3,93 +3,107 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="referrer" content="no-referrer">
-  <title>경제 자료 | MICU CLASS</title>
-  <style>
-    :root{color-scheme:light;--ink:#1e352b;--dim:#52655a;--paper:#faf8f0;--line:#d5dfd0;--accent:#285843}
-    *{box-sizing:border-box}
-    body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.65 system-ui,"Malgun Gothic",sans-serif}
-    header{background:#fff;border-bottom:1px solid var(--line)}
-    nav{max-width:66rem;margin:auto;padding:.7rem 1.25rem;display:flex;align-items:center;flex-wrap:wrap;gap:.5rem 1.5rem}
-    nav a{font-weight:700;text-decoration:none}
-    nav strong{margin-right:auto;color:var(--accent);letter-spacing:.06em}
-    a{color:var(--accent);text-underline-offset:.2em}
-    a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
-    main{max-width:66rem;margin:auto;padding:clamp(1.5rem,6vw,4rem) 1.25rem 3rem}
-    h1,h2,h3{line-height:1.25;margin:0}
-    h1{font-size:clamp(2.4rem,6vw,4.2rem);letter-spacing:-.06em}
-    h2{font-size:1.45rem;letter-spacing:-.03em;margin-bottom:1rem}
-    h3{font-size:1.08rem}
-    p{margin:.5rem 0 0;color:var(--dim)}
-    section{margin-top:2.1rem}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,15rem),1fr));gap:.85rem}
-    article{background:#fff;border:1px solid var(--line);border-radius:.85rem;padding:1rem}
-    article p{font-size:.9375rem}
-    .source{display:block;margin-top:.7rem;font-weight:650}
-    .snapshot-grid{margin-top:1rem}
-    .snapshot-list{padding-left:1.2rem;margin:.6rem 0 0}
-    .snapshot-list li{margin:.45rem 0}
-    .snapshot-list time{display:block;color:var(--dim);font-size:.875rem}
-    .export-number{display:block;color:var(--accent);font-size:1.2rem}
-    .pricing{padding:1rem 1.15rem;border:1px solid var(--line);border-left:.25rem solid var(--accent);background:#edf2e8;border-radius:.5rem}
-    @media(max-width:28rem){nav{gap:.5rem 1rem}}
-  </style>
+  <title>Kronos 경제 리서치</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="kronos-pages.js" defer></script>
+  <script src="data.js" defer></script>
+  <script src="price-chart.js" defer></script>
+  <script src="nvda-outlook.js" defer></script>
+  <script src="app.js" defer></script>
+  <script src="briefing.js" defer></script>
 </head>
 <body>
-  <header>
-    <nav aria-label="강의실 메뉴">
-      <strong>MICU CLASS</strong>
-      <a href="index.html">상세 교재</a>
-      <a href="index.html#lesson-strategy">주식투자전략</a>
-    </nav>
+  <header class="top">
+    <a class="brand" href="#research"><span class="mark">K</span> KRONOS <small>ECONOMY LAB</small></a>
+    <nav aria-label="주 메뉴"><a href="#research">아침 브리핑</a><a href="research.html">개인 리서치</a><a href="#nvda-outlook">NVDA 주가·전망</a><a href="#market-reports">증시 리포트</a><a href="#sources">데이터 출처</a><a href="index.html" id="classroom">MICU 강의실</a></nav>
+    <span class="tag">공개판 · 수집 자료</span>
   </header>
   <main>
-    <h1>경제 자료</h1>
-    <p>이윤희 선생님의 강의 흐름에 따라 공시와 산업 지표를 원문에서 확인합니다.</p>
-    <section aria-labelledby="briefing"><h2 id="briefing">아침 브리핑</h2><p>자료 수집 2026-11-23 01:16 (한국시간). 각 값의 기준월과 공시 접수일을 함께 표시합니다. 새 자료는 페이지에 반영된 시점부터 보입니다.</p><div class="grid snapshot-grid"><article><h3>관세청 월간 수출</h3><p>전자집적회로 · HS 8542<strong class="export-number">USD 40,020,898,731</strong>2026년 10월 · 전년 동월 대비 +203.74%</p><p>미용·기초화장용 제품류 · HS 3304<strong class="export-number">USD 1,154,893,360</strong>2026년 10월 · 전년 동월 대비 +53.32%</p><p><a href="https://www.data.go.kr/data/15101609/openapi.do" target="_blank" rel="noopener noreferrer">관세청 통계 출처</a></p></article><article><h3>최근 OpenDART 공시</h3><p>코스피·코스닥 접수 기간 2026-11-17 ~ 2026-11-23</p><ul class="snapshot-list"><li><time datetime="2026-11-23">2026-11-23</time><a href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261120000633" target="_blank" rel="noopener noreferrer">앱튼 · [기재정정]주요사항보고서(유상증자결정)</a></li><li><time datetime="2026-11-20">2026-11-20</time><a href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261120900976" target="_blank" rel="noopener noreferrer">모아라이프플러스 · [기재정정]최대주주변경              </a></li><li><time datetime="2026-11-20">2026-11-20</time><a href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261120900962" target="_blank" rel="noopener noreferrer">드림인사이트 · 주주명부폐쇄기간또는기준일설정              </a></li><li><time datetime="2026-11-20">2026-11-20</time><a href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261120900961" target="_blank" rel="noopener noreferrer">라파스 · 투자판단관련주요경영사항              (알레르기비염 면역치료제 DF19001의 임상 2b/3상 임상시험계획(IND) 승인 신청 반려)</a></li><li><time datetime="2026-11-20">2026-11-20</time><a href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261120900959" target="_blank" rel="noopener noreferrer">드림인사이트 · 최대주주변경을수반하는주식양수도계약체결              </a></li><li><time datetime="2026-11-20">2026-11-20</time><a href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261120900949" target="_blank" rel="noopener noreferrer">드림인사이트 · 주주총회소집결의              </a></li><li><time datetime="2026-11-20">2026-11-20</time><a href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261120800974" target="_blank" rel="noopener noreferrer">에이프로젠 · [기재정정]주요사항보고서(유상증자결정)(자회사의 주요경영사항)              (제3자배정)</a></li><li><time datetime="2026-11-20">2026-11-20</time><a href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261120800929" target="_blank" rel="noopener noreferrer">마스턴프리미어리츠 · 자본잠식50%이상또는매출액50억원미만사실발생              </a></li></ul></article><article><h3>SEC EDGAR · NVDA</h3><ul class="snapshot-list"><li><time datetime="2026-11-17">2026-11-17</time><a href="https://www.sec.gov/Archives/edgar/data/1045810/000104581026000088/nvda-20261117.htm" target="_blank" rel="noopener noreferrer">NVDA 8-K</a></li><li><time datetime="2026-11-12">2026-11-12</time><a href="https://www.sec.gov/Archives/edgar/data/1045810/000104581026000082/nvda-20261111.htm" target="_blank" rel="noopener noreferrer">NVDA 8-K</a></li><li><time datetime="2026-09-03">2026-09-03</time><a href="https://www.sec.gov/Archives/edgar/data/1045810/000104581026000078/nvda-20260902.htm" target="_blank" rel="noopener noreferrer">NVDA 8-K</a></li><li><time datetime="2026-08-26">2026-08-26</time><a href="https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm" target="_blank" rel="noopener noreferrer">NVDA 10-Q</a></li><li><time datetime="2026-08-26">2026-08-26</time><a href="https://www.sec.gov/Archives/edgar/data/1045810/000104581026000073/nvda-20260826.htm" target="_blank" rel="noopener noreferrer">NVDA 8-K</a></li></ul></article><article><h3>SEC EDGAR · AAPL</h3><ul class="snapshot-list"><li><time datetime="2026-11-09">2026-11-09</time><a href="https://www.sec.gov/Archives/edgar/data/320193/000114036126042798/ef20085077_8k.htm" target="_blank" rel="noopener noreferrer">AAPL 8-K</a></li><li><time datetime="2026-11-03">2026-11-03</time><a href="https://www.sec.gov/Archives/edgar/data/320193/000032019326000026/aapl-20260926.htm" target="_blank" rel="noopener noreferrer">AAPL 10-K</a></li><li><time datetime="2026-11-02">2026-11-02</time><a href="https://www.sec.gov/Archives/edgar/data/320193/000032019326000024/aapl-20261102.htm" target="_blank" rel="noopener noreferrer">AAPL 8-K</a></li><li><time datetime="2026-09-01">2026-09-01</time><a href="https://www.sec.gov/Archives/edgar/data/320193/000114036126035325/ef20081427_8ka.htm" target="_blank" rel="noopener noreferrer">AAPL 8-K/A</a></li><li><time datetime="2026-07-31">2026-07-31</time><a href="https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm" target="_blank" rel="noopener noreferrer">AAPL 10-Q</a></li></ul></article></div><section aria-label="발행기관 리포트"><h3>발행기관 리포트</h3><div class="grid snapshot-grid"><article><h3>한국은행 · 일일 금융외환시장</h3><ul class="snapshot-list"><li><time datetime="2026-11-20">2026-11-20</time><a href="https://www.bok.or.kr/portal/bbs/B0000348/view.do?nttId=11066881&amp;menuNo=201109" target="_blank" rel="noopener noreferrer">일일 금융외환시장 동향(11.20일)</a></li><li><time datetime="2026-11-19">2026-11-19</time><a href="https://www.bok.or.kr/portal/bbs/B0000348/view.do?nttId=11066835&amp;menuNo=201109" target="_blank" rel="noopener noreferrer">일일 금융외환시장 동향(11.19일)</a></li><li><time datetime="2026-11-18">2026-11-18</time><a href="https://www.bok.or.kr/portal/bbs/B0000348/view.do?nttId=11066794&amp;menuNo=201109" target="_blank" rel="noopener noreferrer">일일 금융외환시장 동향(11.18일)</a></li></ul></article><article><h3>한국은행 · 주력산업</h3><ul class="snapshot-list"><li><time datetime="2025-02-17">2025-02-17</time><a href="https://www.bok.or.kr/portal/bbs/B0000357/view.do?nttId=10089810&amp;menuNo=201127" target="_blank" rel="noopener noreferrer">2024년 4/4분기 주력산업 모니터링 보고서</a></li><li><time datetime="2024-11-18">2024-11-18</time><a href="https://www.bok.or.kr/portal/bbs/B0000357/view.do?nttId=10088074&amp;menuNo=201127" target="_blank" rel="noopener noreferrer">2024년 3/4분기 주력산업 모니터링 보고서</a></li><li><time datetime="2024-08-09">2024-08-09</time><a href="https://www.bok.or.kr/portal/bbs/B0000357/view.do?nttId=10086376&amp;menuNo=201127" target="_blank" rel="noopener noreferrer">2024년 2/4분기 주력산업 모니터링 보고서</a></li></ul></article><article><h3>미 연준 · 통화정책</h3><ul class="snapshot-list"><li><time datetime="2026-11-18">2026-11-18</time><a href="https://www.federalreserve.gov/newsevents/pressreleases/monetary20261118a.htm" target="_blank" rel="noopener noreferrer">Minutes of the Federal Open Market Committee, October 27-28, 2026</a></li><li><time datetime="2026-11-12">2026-11-12</time><a href="https://www.federalreserve.gov/newsevents/pressreleases/monetary20261112a.htm" target="_blank" rel="noopener noreferrer">Federal Reserve announces revised tentative schedule of Federal Open Market Committee meetings in 2027</a></li><li><time datetime="2026-10-28">2026-10-28</time><a href="https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm" target="_blank" rel="noopener noreferrer">Federal Reserve issues FOMC statement</a></li></ul></article></div></section></section>
-    <section aria-labelledby="research">
-      <h2 id="research">공시에서 산업·섹터로</h2>
-      <div class="grid">
-        <article>
-          <h3>기업 공시</h3>
-          <p>최근 분기 매출액·영업이익을 전년 같은 분기와 비교하고 수주잔고의 변화를 봅니다.</p>
-          <a class="source" href="https://dart.fss.or.kr/" target="_blank" rel="noopener noreferrer">금융감독원 DART</a>
-          <a class="source" href="https://www.sec.gov/edgar/search/" target="_blank" rel="noopener noreferrer">미국 SEC EDGAR</a>
+    <section id="research" aria-labelledby="research-title">
+      <p class="eyebrow">01 / ECONOMIC RESEARCH</p>
+      <h1 id="research-title">아침 브리핑</h1>
+      <p class="intro">산업에 변화가 생겼을 때, 어떤 숫자로 확인하고 어느 기업 공시를 볼지 한곳에서 정리합니다.</p>
+      <p class="fine muted" id="pages-data-note">브리핑 수집 2026-11-23 01:27 (한국시간) · 공개판에서는 수집된 자료를 표시합니다. <a href="kronos-source.zip">Kronos 원본 실행 파일 내려받기</a></p>
+      <div class="morning-grid">
+        <article class="card feed">
+          <div class="section-top">
+            <h2>관세청 월간 수출</h2>
+            <button type="button" id="refresh-exports">수집 자료 보기</button>
+          </div>
+          <p id="exports-status" class="fine" role="status"></p>
+          <div id="exports-list"></div>
+          <a href="https://www.data.go.kr/data/15101609/openapi.do" target="_blank" rel="noopener noreferrer">관세청 통계 출처</a>
         </article>
-        <article>
-          <h3>산업 지표</h3>
-          <p>같은 품목과 기간의 수출을 비교한 뒤, 산업생산과 금리 흐름을 함께 확인합니다.</p>
-          <a class="source" href="https://tradedata.go.kr/" target="_blank" rel="noopener noreferrer">관세청 수출입무역통계</a>
-          <a class="source" href="https://ecos.bok.or.kr/" target="_blank" rel="noopener noreferrer">한국은행 ECOS</a>
+        <article class="card feed">
+          <h2>최근 OpenDART 공시</h2>
+          <form id="disclosure-search">
+            <label class="search">기업 고유번호 <input id="corp-code" type="text" inputmode="numeric" maxlength="8" pattern="[0-9]{8}" placeholder="8자리 · 비우면 전체"></label>
+            <button type="submit">조회</button>
+          </form>
+          <p id="disclosures-status" class="fine" role="status"></p>
+          <ul class="feed-list" id="disclosures-list"></ul>
+          <a href="https://dart.fss.or.kr/" target="_blank" rel="noopener noreferrer">DART 공시 검색</a>
         </article>
-        <article>
-          <h3>섹터 비교</h3>
-          <p>같은 기간의 지수와 투자자별 거래를 비교하고, 수급과 실적의 방향이 같은지 살펴봅니다.</p>
-          <a class="source" href="https://data.krx.co.kr/" target="_blank" rel="noopener noreferrer">한국거래소 정보데이터시스템</a>
+        <article class="card feed">
+          <h2>미국 SEC 공시</h2>
+          <form id="sec-search">
+            <label class="search">미국 종목 티커 또는 CIK
+              <input id="sec-symbol" type="text" value="AAPL" placeholder="예: AAPL, NVDA" maxlength="12" required>
+            </label>
+            <button type="submit">조회</button>
+          </form>
+          <p id="sec-status" class="fine" role="status"></p>
+          <ul class="feed-list" id="sec-list"></ul>
+          <div class="feed-entry">
+            <button id="sec-analysis-button" type="button" disabled>연간 실적 분석</button>
+            <p id="sec-analysis-status" class="fine" role="status"></p>
+            <div id="sec-analysis-list"></div>
+          </div>
+          <a href="https://www.sec.gov/edgar/search/" target="_blank" rel="noopener noreferrer">SEC EDGAR 공시 검색</a>
         </article>
       </div>
+      <details class="archive">
+        <summary>산업 리서치 예시 보기</summary>
+        <div class="research-grid" id="briefs"></div>
+      </details>
     </section>
-    <section aria-labelledby="reports">
-      <h2 id="reports">경제·증시 리포트</h2>
-      <div class="grid">
-        <article>
-          <h3>국내 경제</h3>
-          <a class="source" href="https://www.kdi.re.kr/research/monTrends" target="_blank" rel="noopener noreferrer">KDI 월간 경제동향</a>
-          <a class="source" href="https://www.bok.or.kr/portal/bbs/B0000348/list.do?menuNo=201109" target="_blank" rel="noopener noreferrer">한국은행 금융·외환시장 동향</a>
-        </article>
-        <article>
-          <h3>시장과 기업</h3>
-          <a class="source" href="https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm" target="_blank" rel="noopener noreferrer">미국 연준 FOMC 발표</a>
-          <a class="source" href="https://www.fnguide.com/Research/SearchReport" target="_blank" rel="noopener noreferrer">FnGuide 증권사 리포트 검색</a>
-        </article>
+    <section id="market-reports" aria-labelledby="reports-title">
+      <div class="section-top">
+        <div><h2 id="reports-title">증시 리포트</h2><p class="fine muted">최근 발행 자료의 제목과 날짜를 모아 보여줍니다.</p></div>
       </div>
+      <p id="reports-status" class="fine muted" role="status"></p>
+      <div class="report-grid" id="reports-list"></div>
+      <p class="fine muted">증권사 자료 더 보기 · <a href="https://securities.miraeasset.com/bbs/board/message/list.do?categoryId=1527" target="_blank" rel="noopener noreferrer">미래에셋증권 투자전략</a> · <a href="https://international.schwab.com/market-commentary" target="_blank" rel="noopener noreferrer">Charles Schwab 시황</a></p>
     </section>
-    <section class="pricing" aria-labelledby="prices">
-      <h2 id="prices">NVDA 가격·실적</h2>
-      <p>이 화면에서는 가격과 기업 자료를 원문으로 안내합니다. 예측을 생성하려면 기존 Kronos 앱을 사용합니다.</p>
-      <a class="source" href="https://www.nasdaq.com/market-activity/stocks/nvda/historical" target="_blank" rel="noopener noreferrer">Nasdaq NVDA 일별 시세</a>
-      <a class="source" href="https://investor.nvidia.com/financial-info/financial-reports-and-sec-filings/default.aspx" target="_blank" rel="noopener noreferrer">NVIDIA 실적·공시</a>
+    <section class="lab" aria-labelledby="nvda-title">
+      <section class="chart-card nvda-outlook" id="nvda-outlook" aria-labelledby="nvda-title">
+        <div class="section-top">
+          <div><p class="eyebrow">NVDA · USD</p><h3 id="nvda-title">최근 종가와 Kronos 전망</h3></div>
+          <a href="https://www.nasdaq.com/market-activity/stocks/nvda/historical" target="_blank" rel="noopener noreferrer">Nasdaq 원문</a><button id="nvda-refresh" type="button" hidden>전망 다시 보기</button>
+        </div>
+        <p class="muted">마감된 미국 정규장 일봉 120개로 다음 5거래일의 예상 종가를 계산합니다.</p>
+        <p id="nvda-status" class="fine muted" role="status"></p>
+        <div id="nvda-market" hidden>
+          <p class="nvda-quote"><strong id="nvda-close"></strong><span id="nvda-change"></span></p>
+          <p id="nvda-origin" class="fine muted"></p>
+          <svg id="nvda-chart" viewBox="0 0 1000 300" role="img" aria-label="NVDA 최근 마감 종가와 Kronos의 다음 5거래일 예상 종가"></svg>
+          <div class="legend"><span class="actual">실제 종가 · 최근 30거래일</span><span id="nvda-legend" class="forecast" hidden>예상 종가 · 다음 5거래일</span></div>
+          <div id="nvda-forecast" hidden>
+            <h4>거래일별 예상 종가</h4>
+            <dl id="nvda-dates"></dl>
+          </div>
+          <p class="fine muted"><span id="nvda-checked"></span> · <a id="nvda-source" target="_blank" rel="noopener noreferrer">Nasdaq 일봉 출처</a></p>
+        </div>
+      </section>
+    </section>
+    <section id="sources" aria-labelledby="source-title">
+      <div class="section-top">
+        <div><p class="eyebrow">03 / SOURCE LIBRARY</p><h2 id="source-title">데이터 출처</h2></div>
+        <label class="search">출처 검색 <input id="source-search" type="search" placeholder="예: 수출, 금리, 공시"></label>
+      </div>
+      <div class="source-grid" id="source-list"></div>
     </section>
   </main>
+  <footer>KRONOS ECONOMY LAB <span>경제 자료와 시장 전망</span></footer>
 </body>
 </html>
