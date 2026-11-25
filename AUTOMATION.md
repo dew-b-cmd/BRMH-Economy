@@ -14,8 +14,15 @@
 - 한국시간 07:17, 12:17, 19:17 예정 실행 (GitHub 예약 실행 지연 가능). 월간 지표는 성공 후 20시간 이상 지나면 재조회; 공시는 매 실행; NVDA 종가 해시 변경 시 재추론.
 - 기존 ZIP의 Python 수집 모듈, 120봉, 5거래일, 고정 Kronos-small 가중치를 재사용합니다. 거래일표는 2026~2028년만 지원하므로 그 전에 확장해야 합니다.
 - 소스별 실패 시 기존 데이터와 성공 시각 보존. 새 종가와 예측 해시가 다르면 예측을 표시하지 않음. 과거 예측은 기존 저장본일 수 있으며 상태로 구분합니다.
-- 공개판 SEC는 NVDA/AAPL만, DART는 기존 시장 전체 조회만 지원. 실시간 임의 종목 검색은 별도 서버 필요.
+- 시장 전체 공시와 정기 브리핑은 기존 스냅숏을 사용합니다. 기업을 입력하면 Cloudflare Worker가 SEC 또는 OpenDART에 조회합니다. 기업 식별용 디렉터리는 GitHub Actions에서 생성하고 약 하루마다 갱신합니다.
+- SEC는 티커 또는 CIK, OpenDART는 기업명·6자리 종목코드·8자리 고유번호를 지원합니다. 날짜 범위는 한 번에 최대 366일입니다. 검색 결과의 원문은 각 기관 공식 사이트에서 확인할 수 있습니다.
 - 공개 저장소의 표준 GitHub-hosted 러너 무료 사용을 전제로 설계. 모델 다운로드/CPU 추론 시간, Nasdaq의 클라우드 IP 제한, API 키 승인, RSS 및 SEC 접근은 실제 실행으로 확인해야 합니다.
 - GITHUB_TOKEN 커밋 후 별도 배포 이벤트에 의존하지 않고 같은 워크플로에서 Pages artifact를 직접 배포합니다.
 - 브라우저 JSON 요청은 no-store로 지정하지만 CDN 배포 반영 지연 가능. 최초 배포 후 실제 화면을 반드시 확인하세요.
-- 이 패키지의 테스트는 로컬 단위 테스트와 샘플 설치 테스트입니다. 원본 저장소 전체, 실 API, 실제 모델 추론, GitHub 실행 및 배포는 아직 검증하지 않았습니다.
+
+## 공시 검색 API 배포
+
+1. Cloudflare Wrangler에서 배포 계정으로 로그인하고 `wrangler deploy --config worker/wrangler.toml`을 실행합니다.
+2. 같은 Worker의 Secrets에 `OPENDART_API_KEY`와 `SEC_CONTACT_EMAIL`을 등록합니다. 브리핑용 GitHub Actions Secrets는 기존과 같은 용도로 사용합니다.
+3. Worker URL을 GitHub Actions 저장소 변수 `DISCLOSURE_API_URL`에 등록합니다. 이후 Pages 워크플로를 실행하면 공개 주소를 배포용 HTML에 연결합니다.
+4. `node --test worker/*.test.mjs`로 입력, 권한, 오류 및 재무 분석 단위 테스트를 실행할 수 있습니다.

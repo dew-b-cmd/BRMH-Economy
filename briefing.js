@@ -31,6 +31,9 @@
       const data = await response.json();
       if (!response.ok) {
         status.textContent = data.status === 'setup' ? '연결 설정 필요 · ' + data.message : data.message;
+        if (Array.isArray(data.candidates)) {
+          for (const issuer of data.candidates) list.append(node('li', `${issuer.name} · ${issuer.code}`));
+        }
         return;
       }
       render(data, list, status);
@@ -59,8 +62,8 @@
     }
   }
 
-  function renderDisclosures(data, list, status, corpCode) {
-    const scope = corpCode ? '기업 ' + corpCode : '코스피·코스닥';
+  function renderDisclosures(data, list, status, company) {
+    const scope = company ? `${data.name} · 고유번호 ${data.corp_code}` : '코스피·코스닥';
     status.textContent = scope + ' · 접수 ' + data.start + ' ~ ' + data.end +
       (data.items.length ? '' : ' · 접수된 공시 없음');
     for (const item of data.items) {
@@ -76,11 +79,12 @@
 
   function renderSec(data, list, status) {
     status.textContent = data.name + ' · CIK ' + data.cik +
-      (data.items.length ? ' · 최근 주요 공시 ' + data.items.length + '건' : ' · 조회된 주요 공시 없음');
+      (data.start ? ` · ${data.start} ~ ${data.end}` : '') +
+      (data.items.length ? ' · 검색 결과 ' + (data.total ?? data.items.length) + '건' : ' · 해당 기간에 공시 없음');
     for (const item of data.items) {
       const entry = node('li', '', 'feed-entry');
       const form = item.form.replace(/\/A$/, '');
-      const link = node('a', item.form + ' · ' + secForms[form] + (form !== item.form ? ' 정정' : ''));
+      const link = node('a', secForms[form] ? item.form + ' · ' + secForms[form] + (form !== item.form ? ' 정정' : '') : item.form);
       link.href = item.url;
       link.target = '_blank';
       link.rel = 'noopener noreferrer';
@@ -96,34 +100,75 @@
   const secSubmit = secForm.querySelector('button');
   const secAnalysisButton = byId('sec-analysis-button');
   let selectedSecSymbol = '';
+
+  function searchParams(provider, company, page) {
+    const params = new URLSearchParams({ q: company, page });
+    for (const key of ['start', 'end', 'type']) {
+      const value = byId(provider + '-' + key).value;
+      if (value) params.set(key, value);
+    }
+    return '?' + params;
+  }
+
+  function pagination(provider, data, load) {
+    const panel = byId(provider + '-pages');
+    panel.replaceChildren();
+    panel.hidden = data.total_pages <= 1 || !data.total_pages;
+    if (panel.hidden) return;
+    const before = node('button', '이전');
+    const after = node('button', '다음');
+    before.disabled = data.page <= 1;
+    after.disabled = data.page >= data.total_pages;
+    before.addEventListener('click', () => load(data.page - 1));
+    after.addEventListener('click', () => load(data.page + 1));
+    panel.append(before, node('span', `${data.page} / ${data.total_pages} 페이지`), after);
+  }
   async function getExports() {
     refresh.disabled = true;
     try { await loadFeed('exports', '', renderExports); }
     finally { refresh.disabled = false; }
   }
-  async function getDisclosures() {
+  async function getDisclosures(page = 1) {
     if (submit.disabled) return;
-    const corpCode = byId('corp-code').value.trim();
-    const query = corpCode ? '?' + new URLSearchParams({ corp_code: corpCode }) : '';
+    const company = byId('corp-code').value.trim();
+    const query = company ? searchParams('dart', company, page) : '';
+    pagination('dart', {}, getDisclosures);
+    if (!company && ['start', 'end', 'type'].some(key => byId('dart-' + key).value)) {
+      byId('disclosures-list').replaceChildren();
+      byId('disclosures-status').textContent = '기간과 공시 유형을 선택하려면 회사명 또는 코드를 입력해 주세요.';
+      return;
+    }
     submit.disabled = true;
     try {
-      await loadFeed('disclosures', query, (data, list, status) => renderDisclosures(data, list, status, corpCode));
+      await loadFeed('disclosures', query, (data, list, status) => {
+        renderDisclosures(data, list, status, company);
+        if (company === byId('corp-code').value.trim() && query === searchParams('dart', company, page)) {
+          pagination('dart', data, getDisclosures);
+        }
+      });
     } finally { submit.disabled = false; }
   }
-  async function getSec() {
+  async function getSec(page = 1) {
     if (secSubmit.disabled) return;
     const symbol = byId('sec-symbol').value.trim();
+    const query = searchParams('sec', symbol, page);
     selectedSecSymbol = '';
+    byId('sec-official').href = 'https://www.sec.gov/edgar/search/';
     secAnalysisButton.disabled = true;
     byId('sec-analysis-status').textContent = '';
     byId('sec-analysis-list').replaceChildren();
+    pagination('sec', {}, getSec);
     secSubmit.disabled = true;
     try {
-      await loadFeed('sec', '?' + new URLSearchParams({ symbol }), (data, list, status) => {
+      await loadFeed('sec', query, (data, list, status) => {
         renderSec(data, list, status);
-        selectedSecSymbol = symbol;
+        if (symbol === byId('sec-symbol').value.trim() && query === searchParams('sec', symbol, page)) {
+          pagination('sec', data, getSec);
+        }
+        byId('sec-official').href = data.source_url || 'https://www.sec.gov/edgar/search/';
+        selectedSecSymbol = data.cik;
         secAnalysisButton.disabled = !data.annual;
-        if (!data.annual) byId('sec-analysis-status').textContent = '조회된 10-K 연차보고서가 없습니다.';
+        if (!data.annual && !data._refresh) byId('sec-analysis-status').textContent = '분석할 연차보고서를 찾지 못했습니다.';
       });
     } finally { secSubmit.disabled = false; }
   }
@@ -134,9 +179,9 @@
       : '비교에 사용할 연간 SEC 수치를 찾지 못했습니다.';
     for (const metric of data.metrics) {
       const entry = node('div', '', 'feed-entry');
-      entry.append(node('b', metric.label + ' · USD ' + usd.format(metric.value)));
+      entry.append(node('b', metric.label + ' · ' + metric.unit + ' ' + usd.format(metric.value)));
       if (metric.prior_value !== null) {
-        entry.append(node('small', '전년 ' + metric.prior_period + ' · USD ' + usd.format(metric.prior_value)));
+        entry.append(node('small', '전년 ' + metric.prior_period + ' · ' + metric.unit + ' ' + usd.format(metric.prior_value)));
       }
       const change = metric.change_pct === null ? '전년 대비 증감률을 표시할 수 없습니다.'
         : '전년 대비 ' + percent.format(metric.change_pct) + '%';
@@ -163,7 +208,7 @@
     secSubmit.disabled = true;
     try {
       await loadFeed('sec-analysis', '?' + new URLSearchParams({ symbol: selectedSecSymbol }),
-        renderSecAnalysis, { path: 'sec/analysis', method: 'POST', timeout: 82000 });
+        renderSecAnalysis, { path: 'sec/analysis', timeout: 28000 });
     } finally {
       secAnalysisButton.disabled = false;
       secSubmit.disabled = false;
@@ -173,6 +218,8 @@
   refresh.addEventListener('click', getExports);
   form.addEventListener('submit', event => { event.preventDefault(); getDisclosures(); });
   secForm.addEventListener('submit', event => { event.preventDefault(); getSec(); });
+  form.addEventListener('input', () => pagination('dart', {}, getDisclosures));
+  secForm.addEventListener('input', () => pagination('sec', {}, getSec));
   secAnalysisButton.addEventListener('click', getSecAnalysis);
   getExports();
   getDisclosures();

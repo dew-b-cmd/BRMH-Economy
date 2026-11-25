@@ -1,0 +1,19 @@
+name = "brmh-economy-disclosures"
+main = "index.mjs"
+compatibility_date = "2026-11-25"
+workers_dev = true
+preview_urls = false
+
+[vars]
+ALLOWED_ORIGIN = "https://dew-b-cmd.github.io"
+CATALOG_BASE = "https://dew-b-cmd.github.io/BRMH-Economy/data/disclosure-catalog/"
+
+[[ratelimits]]
+name = "CLIENT_LIMIT"
+namespace_id = "112501"
+simple = { limit = 36, period = 60 }
+
+[[ratelimits]]
+name = "PROVIDER_LIMIT"
+namespace_id = "112502"
+simple = { limit = 16, period = 10 }
