@@ -1,5 +1,5 @@
 {
-  "checked": "2026-11-25T05:34:29+00:00",
+  "checked": "2026-11-25T05:41:44+00:00",
   "exports": [
     {
       "hs_code": "8542",
@@ -46,44 +46,44 @@
         "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261125900303"
       },
       {
-        "receipt": "20261125800316",
+        "receipt": "20261125800348",
         "received": "20261125",
-        "company": "KG케미칼",
-        "report": "최대주주등소유주식변동신고서              ",
-        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261125800316"
+        "company": "BNK금융지주",
+        "report": "현금ㆍ현물배당을위한주주명부폐쇄(기준일)결정(자회사의 주요경영사항)              ",
+        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261125800348"
       },
       {
-        "receipt": "20261125800314",
+        "receipt": "20261125800338",
         "received": "20261125",
-        "company": "영진약품",
-        "report": "단기차입금증가결정              ",
-        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261125800314"
+        "company": "한화리츠",
+        "report": "기업설명회(IR)개최(안내공시)              ",
+        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261125800338"
       },
       {
-        "receipt": "20261125800307",
+        "receipt": "20261125800337",
         "received": "20261125",
-        "company": "현대건설",
-        "report": "단일판매ㆍ공급계약체결              ",
-        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261125800307"
+        "company": "대창",
+        "report": "주주명부폐쇄기간또는기준일설정              ",
+        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261125800337"
       },
       {
-        "receipt": "20261125800299",
+        "receipt": "20261125800336",
         "received": "20261125",
-        "company": "SK",
-        "report": "기타경영사항(자율공시)              ",
-        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261125800299"
+        "company": "대창",
+        "report": "주주총회소집결의              ",
+        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261125800336"
       },
       {
-        "receipt": "20261125000395",
+        "receipt": "20261125800334",
         "received": "20261125",
-        "company": "현대해상",
-        "report": "대규모기업집단현황공시[분기별공시(대표회사용)]",
-        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261125000395"
+        "company": "대창",
+        "report": "주식병합결정              ",
+        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261125800334"
       }
     ],
     "start": "2026-11-19",
     "end": "2026-11-25",
-    "checked_at": "2026-11-25T14:34:07+09:00"
+    "checked_at": "2026-11-25T14:41:33+09:00"
   },
   "sec": {
     "NVDA": {
@@ -348,7 +348,7 @@
     "origin": "2026-11-24",
     "close": 155.38,
     "change_percent": -5.858830657376557,
-    "checked_at": "2026-11-25T05:34:12+00:00",
+    "checked_at": "2026-11-25T05:41:38+00:00",
     "source": "https://www.nasdaq.com/market-activity/stocks/nvda/historical",
     "revision": "99d6e767749d98f94f858940e41f751da210024edff7eb6467d99242b2e52c2d",
     "forecast_message": "",
@@ -479,7 +479,7 @@
     "rows": [
       {
         "time": "2026-11-25",
-        "forecast": 152.24273681640625
+        "forecast": 152.2427215576172
       },
       {
         "time": "2026-11-27",
@@ -495,7 +495,7 @@
       },
       {
         "time": "2026-12-02",
-        "forecast": 163.21612548828125
+        "forecast": 163.2161407470703
       }
     ],
     "origin": "2026-11-24",
@@ -506,58 +506,58 @@
   "refresh": {
     "market": {
       "state": "ok",
-      "last_success": "2026-11-25T05:34:11+00:00",
-      "last_attempt": "2026-11-25T05:34:11+00:00"
+      "last_success": "2026-11-25T05:41:36+00:00",
+      "last_attempt": "2026-11-25T05:41:36+00:00"
     },
     "forecast": {
       "state": "ok",
-      "last_success": "2026-11-25T05:34:12+00:00",
-      "last_attempt": "2026-11-25T05:34:12+00:00"
+      "last_success": "2026-11-25T05:41:38+00:00",
+      "last_attempt": "2026-11-25T05:41:38+00:00"
     },
     "dart": {
       "state": "ok",
-      "last_success": "2026-11-25T05:34:07+00:00",
-      "last_attempt": "2026-11-25T05:34:07+00:00"
+      "last_success": "2026-11-25T05:41:32+00:00",
+      "last_attempt": "2026-11-25T05:41:32+00:00"
     },
     "exports:8542": {
       "state": "ok",
-      "last_success": "2026-11-25T05:34:06+00:00",
-      "last_attempt": "2026-11-25T05:34:06+00:00"
+      "last_success": "2026-11-25T05:41:30+00:00",
+      "last_attempt": "2026-11-25T05:41:30+00:00"
     },
     "exports:3304": {
       "state": "ok",
-      "last_success": "2026-11-25T05:34:07+00:00",
-      "last_attempt": "2026-11-25T05:34:07+00:00"
+      "last_success": "2026-11-25T05:41:31+00:00",
+      "last_attempt": "2026-11-25T05:41:31+00:00"
     },
     "sec:NVDA": {
       "state": "ok",
-      "last_success": "2026-11-25T05:34:07+00:00",
-      "last_attempt": "2026-11-25T05:34:07+00:00"
+      "last_success": "2026-11-25T05:41:33+00:00",
+      "last_attempt": "2026-11-25T05:41:33+00:00"
     },
     "sec:AAPL": {
       "state": "ok",
-      "last_success": "2026-11-25T05:34:08+00:00",
-      "last_attempt": "2026-11-25T05:34:08+00:00"
+      "last_success": "2026-11-25T05:41:34+00:00",
+      "last_attempt": "2026-11-25T05:41:34+00:00"
     },
     "analysis:NVDA": {
       "state": "ok",
-      "last_success": "2026-11-25T05:34:07+00:00",
-      "last_attempt": "2026-11-25T05:34:07+00:00"
+      "last_success": "2026-11-25T05:41:33+00:00",
+      "last_attempt": "2026-11-25T05:41:33+00:00"
     },
     "analysis:AAPL": {
       "state": "ok",
-      "last_success": "2026-11-25T05:34:08+00:00",
-      "last_attempt": "2026-11-25T05:34:08+00:00"
+      "last_success": "2026-11-25T05:41:34+00:00",
+      "last_attempt": "2026-11-25T05:41:34+00:00"
     },
     "production": {
       "state": "ok",
-      "last_success": "2026-11-25T05:34:08+00:00",
-      "last_attempt": "2026-11-25T05:34:08+00:00"
+      "last_success": "2026-11-25T05:41:34+00:00",
+      "last_attempt": "2026-11-25T05:41:34+00:00"
     },
     "sector": {
       "state": "ok",
-      "last_success": "2026-11-25T05:34:09+00:00",
-      "last_attempt": "2026-11-25T05:34:09+00:00"
+      "last_success": "2026-11-25T05:41:35+00:00",
+      "last_attempt": "2026-11-25T05:41:35+00:00"
     }
   }
 }
