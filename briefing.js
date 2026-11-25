@@ -34,6 +34,7 @@
         return;
       }
       render(data, list, status);
+      window.economyRefreshStatus(data, status);
     } catch {
       status.textContent = '자료를 불러오지 못했습니다. 잠시 후 다시 조회하세요.';
     }

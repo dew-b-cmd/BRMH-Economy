@@ -51,14 +51,15 @@
     status.textContent = 'Nasdaq 마감 종가를 조회하고 있습니다…';
     try {
       market = await request('daily', 'GET', 15000);
-      if (forecast?.revision !== market.revision) forecast = null;
+      if (forecast?.revision !== market.revision || market.forecast_message) forecast = null;
       render();
       if (market.forecast_message) {
         status.textContent = market.forecast_message;
+        window.economyRefreshStatus(market, status);
         return;
       }
       if (!forecast) {
-        status.textContent = 'Kronos가 다음 5거래일을 계산하고 있습니다…';
+        status.textContent = '저장된 Kronos 전망을 불러오고 있습니다…';
         forecast = await request('forecast', 'POST', 110000);
         if (forecast.revision !== market.revision) {
           throw new Error('새 종가가 반영됐습니다. 가격을 다시 조회하세요.');
@@ -66,6 +67,7 @@
         render();
       }
       status.textContent = '수집된 마지막 정규장 종가 기준의 Kronos 결과입니다.';
+      window.economyRefreshStatus(market, status);
     } catch (error) {
       forecast = null;
       render();

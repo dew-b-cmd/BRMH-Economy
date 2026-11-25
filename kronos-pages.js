@@ -1,42 +1,49 @@
-// The original Kronos renderers read static snapshots on GitHub Pages.
+// Fetch a public snapshot; no keys or API credentials are sent by the browser.
 (() => {
-  const data = {"checked":"2026-11-23T01:27:34+09:00","exports":[{"hs_code":"8542","label":"\uc804\uc790\uc9d1\uc801\ud68c\ub85c","month":"202610","value_usd":40020898731,"yoy_percent":203.74,"comparison_month":"202510","comparison_usd":13175851662,"status":"ok"},{"hs_code":"3304","label":"\ubbf8\uc6a9\u00b7\uae30\ucd08\ud654\uc7a5\uc6a9 \uc81c\ud488\ub958","month":"202610","value_usd":1154893360,"yoy_percent":53.32,"comparison_month":"202510","comparison_usd":753261812,"status":"ok"}],"dart":{"items":[{"receipt":"20261120000633","received":"20261123","company":"\uc571\ud2bc","report":"[\uae30\uc7ac\uc815\uc815]\uc8fc\uc694\uc0ac\ud56d\ubcf4\uace0\uc11c(\uc720\uc0c1\uc99d\uc790\uacb0\uc815)","url":"https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261120000633"},{"receipt":"20261120900976","received":"20261120","company":"\ubaa8\uc544\ub77c\uc774\ud504\ud50c\ub7ec\uc2a4","report":"[\uae30\uc7ac\uc815\uc815]\ucd5c\ub300\uc8fc\uc8fc\ubcc0\uacbd              ","url":"https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261120900976"},{"receipt":"20261120900962","received":"20261120","company":"\ub4dc\ub9bc\uc778\uc0ac\uc774\ud2b8","report":"\uc8fc\uc8fc\uba85\ubd80\ud3d0\uc1c4\uae30\uac04\ub610\ub294\uae30\uc900\uc77c\uc124\uc815              ","url":"https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261120900962"},{"receipt":"20261120900961","received":"20261120","company":"\ub77c\ud30c\uc2a4","report":"\ud22c\uc790\ud310\ub2e8\uad00\ub828\uc8fc\uc694\uacbd\uc601\uc0ac\ud56d              (\uc54c\ub808\ub974\uae30\ube44\uc5fc \uba74\uc5ed\uce58\ub8cc\uc81c DF19001\uc758 \uc784\uc0c1 2b/3\uc0c1 \uc784\uc0c1\uc2dc\ud5d8\uacc4\ud68d(IND) \uc2b9\uc778 \uc2e0\uccad \ubc18\ub824)","url":"https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261120900961"},{"receipt":"20261120900959","received":"20261120","company":"\ub4dc\ub9bc\uc778\uc0ac\uc774\ud2b8","report":"\ucd5c\ub300\uc8fc\uc8fc\ubcc0\uacbd\uc744\uc218\ubc18\ud558\ub294\uc8fc\uc2dd\uc591\uc218\ub3c4\uacc4\uc57d\uccb4\uacb0              ","url":"https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261120900959"},{"receipt":"20261120900949","received":"20261120","company":"\ub4dc\ub9bc\uc778\uc0ac\uc774\ud2b8","report":"\uc8fc\uc8fc\ucd1d\ud68c\uc18c\uc9d1\uacb0\uc758              ","url":"https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261120900949"},{"receipt":"20261120800974","received":"20261120","company":"\uc5d0\uc774\ud504\ub85c\uc820","report":"[\uae30\uc7ac\uc815\uc815]\uc8fc\uc694\uc0ac\ud56d\ubcf4\uace0\uc11c(\uc720\uc0c1\uc99d\uc790\uacb0\uc815)(\uc790\ud68c\uc0ac\uc758 \uc8fc\uc694\uacbd\uc601\uc0ac\ud56d)              (\uc81c3\uc790\ubc30\uc815)","url":"https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261120800974"},{"receipt":"20261120800929","received":"20261120","company":"\ub9c8\uc2a4\ud134\ud504\ub9ac\ubbf8\uc5b4\ub9ac\uce20","report":"\uc790\ubcf8\uc7a0\uc2dd50%\uc774\uc0c1\ub610\ub294\ub9e4\ucd9c\uc56150\uc5b5\uc6d0\ubbf8\ub9cc\uc0ac\uc2e4\ubc1c\uc0dd              ","url":"https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261120800929"}],"start":"2026-11-17","end":"2026-11-23","checked_at":"2026-11-23T01:27:35+09:00"},"sec":{"NVDA":{"name":"NVIDIA CORP","cik":"0001045810","items":[{"form":"8-K","filed":"2026-11-17","url":"https://www.sec.gov/Archives/edgar/data/1045810/000104581026000088/nvda-20261117.htm"},{"form":"8-K","filed":"2026-11-12","url":"https://www.sec.gov/Archives/edgar/data/1045810/000104581026000082/nvda-20261111.htm"},{"form":"8-K","filed":"2026-09-03","url":"https://www.sec.gov/Archives/edgar/data/1045810/000104581026000078/nvda-20260902.htm"},{"form":"10-Q","filed":"2026-08-26","url":"https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm"},{"form":"8-K","filed":"2026-08-26","url":"https://www.sec.gov/Archives/edgar/data/1045810/000104581026000073/nvda-20260826.htm"},{"form":"8-K","filed":"2026-08-17","url":"https://www.sec.gov/Archives/edgar/data/1045810/000104581026000069/nvda-20260817.htm"},{"form":"8-K","filed":"2026-07-02","url":"https://www.sec.gov/Archives/edgar/data/1045810/000104581026000060/nvda-20260628.htm"},{"form":"8-K","filed":"2026-06-30","url":"https://www.sec.gov/Archives/edgar/data/1045810/000104581026000056/nvda-20260624.htm"}],"annual":{"form":"10-K","filed":"2026-02-25","url":"https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm","period":"2026-01-25","accession":"0001045810-26-000021"}},"AAPL":{"name":"Apple Inc.","cik":"0000320193","items":[{"form":"8-K","filed":"2026-11-09","url":"https://www.sec.gov/Archives/edgar/data/320193/000114036126042798/ef20085077_8k.htm"},{"form":"10-K","filed":"2026-11-03","url":"https://www.sec.gov/Archives/edgar/data/320193/000032019326000026/aapl-20260926.htm"},{"form":"8-K","filed":"2026-11-02","url":"https://www.sec.gov/Archives/edgar/data/320193/000032019326000024/aapl-20261102.htm"},{"form":"8-K/A","filed":"2026-09-01","url":"https://www.sec.gov/Archives/edgar/data/320193/000114036126035325/ef20081427_8ka.htm"},{"form":"10-Q","filed":"2026-07-31","url":"https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm"},{"form":"8-K","filed":"2026-07-30","url":"https://www.sec.gov/Archives/edgar/data/320193/000032019326000018/aapl-20260730.htm"},{"form":"10-Q","filed":"2026-05-01","url":"https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/aapl-20260328.htm"},{"form":"8-K","filed":"2026-04-30","url":"https://www.sec.gov/Archives/edgar/data/320193/000032019326000011/aapl-20260430.htm"}],"annual":{"form":"10-K","filed":"2026-11-03","url":"https://www.sec.gov/Archives/edgar/data/320193/000032019326000026/aapl-20260926.htm","period":"2026-09-26","accession":"0000320193-26-000026"}}},"analysis":{"NVDA":{"name":"NVIDIA CORP","annual":{"form":"10-K","filed":"2026-02-25","url":"https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm","period":"2026-01-25","accession":"0001045810-26-000021"},"metrics":[{"id":"revenue","label":"\ub9e4\ucd9c","tag":"Revenues","unit":"USD","period":"2026-01-25","value":215938000000,"prior_period":"2025-01-26","prior_value":130497000000,"change_pct":65.47},{"id":"net_income","label":"\uc21c\uc774\uc775","tag":"NetIncomeLoss","unit":"USD","period":"2026-01-25","value":120067000000,"prior_period":"2025-01-26","prior_value":72880000000,"change_pct":64.75}]},"AAPL":{"name":"Apple Inc.","annual":{"form":"10-K","filed":"2026-11-03","url":"https://www.sec.gov/Archives/edgar/data/320193/000032019326000026/aapl-20260926.htm","period":"2026-09-26","accession":"0000320193-26-000026"},"metrics":[{"id":"revenue","label":"\ub9e4\ucd9c","tag":"RevenueFromContractWithCustomerExcludingAssessedTax","unit":"USD","period":"2026-09-26","value":478834000000,"prior_period":"2025-09-27","prior_value":416161000000,"change_pct":15.06},{"id":"net_income","label":"\uc21c\uc774\uc775","tag":"NetIncomeLoss","unit":"USD","period":"2026-09-26","value":132175000000,"prior_period":"2025-09-27","prior_value":112010000000,"change_pct":18.0}]}},"filing":{"name":"NVIDIA CORP","annual":{"form":"10-K","filed":"2026-02-25","url":"https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm","period":"2026-01-25","accession":"0001045810-26-000021"},"metrics":[{"id":"revenue","label":"\ub9e4\ucd9c","tag":"Revenues","unit":"USD","period":"2026-01-25","value":215938000000,"prior_period":"2025-01-26","prior_value":130497000000,"change_pct":65.47},{"id":"net_income","label":"\uc21c\uc774\uc775","tag":"NetIncomeLoss","unit":"USD","period":"2026-01-25","value":120067000000,"prior_period":"2025-01-26","prior_value":72880000000,"change_pct":64.75}]},"industry":{"exports":{"hs_code":"8542","label":"\uc804\uc790\uc9d1\uc801\ud68c\ub85c","month":"202610","value_usd":40020898731,"yoy_percent":203.74,"comparison_month":"202510","comparison_usd":13175851662,"status":"ok"},"production":{"month":"2026-10","value":195.0164,"source":"https://fred.stlouisfed.org/series/IPG3344S","yoy_percent":15.31},"production_error":"\uc5f0\uc900 \uc0dd\uc0b0\uc9c0\uc218\ub97c \uc77d\uc9c0 \ubabb\ud588\uc2b5\ub2c8\ub2e4."},"sector":{"periods":[{"months":1,"start":"202609","end":"202609","industry":6.01,"market":-0.76,"difference_pp":6.77},{"months":3,"start":"202607","end":"202609","industry":5.05,"market":1.78,"difference_pp":3.27},{"months":6,"start":"202604","end":"202609","industry":41.7,"market":17.14,"difference_pp":24.56}],"source":"https://mba.tuck.dartmouth.edu/pages/faculty/Ken.French/data_library.html"},"market":{"origin":"2026-11-20","close":125.53,"change_percent":-14.008768324428,"checked_at":"2026-11-22T16:24:59+00:00","source":"https://www.nasdaq.com/market-activity/stocks/nvda/historical","revision":"0a181d01b324bddcb63f8a43d0a3b4d99452f03a8439328d926d34be2daad816","forecast_message":"","history":[{"time":"2026-10-12","actual":226.32},{"time":"2026-10-13","actual":228.52},{"time":"2026-10-14","actual":221.3},{"time":"2026-10-15","actual":217.23},{"time":"2026-10-16","actual":214.13},{"time":"2026-10-19","actual":217.09},{"time":"2026-10-20","actual":216.47},{"time":"2026-10-21","actual":221.97},{"time":"2026-10-22","actual":212.21},{"time":"2026-10-23","actual":210.96},{"time":"2026-10-26","actual":216.0},{"time":"2026-10-27","actual":217.94},{"time":"2026-10-28","actual":215.38},{"time":"2026-10-29","actual":213.66},{"time":"2026-10-30","actual":204.64},{"time":"2026-11-02","actual":202.06},{"time":"2026-11-03","actual":206.69},{"time":"2026-11-04","actual":200.13},{"time":"2026-11-05","actual":181.6},{"time":"2026-11-06","actual":186.64},{"time":"2026-11-09","actual":178.67},{"time":"2026-11-10","actual":168.89},{"time":"2026-11-11","actual":173.73},{"time":"2026-11-12","actual":166.19},{"time":"2026-11-13","actual":162.85},{"time":"2026-11-16","actual":156.14},{"time":"2026-11-17","actual":155.46},{"time":"2026-11-18","actual":150.96},{"time":"2026-11-19","actual":145.98},{"time":"2026-11-20","actual":125.53}]},"forecast":{"rows":[{"time":"2026-11-23","forecast":124.9394760131836},{"time":"2026-11-24","forecast":127.61259460449219},{"time":"2026-11-25","forecast":123.18370056152344},{"time":"2026-11-27","forecast":125.54033660888672},{"time":"2026-11-30","forecast":128.85699462890625}],"origin":"2026-11-20","revision":"0a181d01b324bddcb63f8a43d0a3b4d99452f03a8439328d926d34be2daad816"}};
-  const unavailable = (message = '공개판에서 수집된 자료를 찾지 못했습니다. 발행처 원문을 확인해 주세요.') =>
-    Response.json({ status: 'unavailable', message }, { status: 404 });
-  const read = value => value ? Response.json(value) : unavailable();
+  const snapshotURL = new URL('./data/economy.json', document.baseURI);
+  const snapshotTime = new Intl.DateTimeFormat('ko-KR', {
+    dateStyle: 'short', timeStyle: 'short', timeZone: 'Asia/Seoul',
+  });
+  const unavailable = (message = '공개판에서 수집된 자료를 찾지 못했습니다. 발행처 원문을 확인해 주세요.') => Response.json({status:'unavailable', message}, {status:404});
   const symbolFor = value => {
     const search = (value || '').trim().toUpperCase();
     if (search === 'NVDA' || /^0*1045810$/.test(search)) return 'NVDA';
     if (search === 'AAPL' || /^0*320193$/.test(search)) return 'AAPL';
     return '';
   };
-
-  window.kronosPagesRequest = async path => {
+  const statusLine = (data, keys) => keys.map(key => {
+    const row = data.refresh?.[key];
+    if (!row) return '';
+    const labels = {ok:'갱신 성공',cached:'수집 실패 · 이전 자료',error:'수집 실패',setup:'연결 설정 필요',baseline:'초기 저장본',pending:'새 데이터 대기'};
+    const time = row.last_success ? new Date(row.last_success).toLocaleString('ko-KR',{timeZone:'Asia/Seoul'}) : '자동 갱신 기록 없음';
+    return key + ' · ' + (labels[row.state] || row.state) + ' · 마지막 성공 ' + time;
+  }).filter(Boolean).join(' / ');
+  window.economyRefreshStatus = (payload, element) => {
+    if (payload?._refresh) element.textContent += (element.textContent ? ' · ' : '') + payload._refresh;
+  };
+  window.kronosPagesRequest = async (path, options = {}) => {
+    const response = await fetch(snapshotURL, {cache:'no-store',signal:options.signal});
+    if (!response.ok) throw new Error('경제 데이터 파일을 읽지 못했습니다.');
+    const data = await response.json();
+    const briefingNote = document.getElementById('pages-data-note');
+    const checked = new Date(data.checked);
+    if (briefingNote?.firstChild?.nodeType === Node.TEXT_NODE && Number.isFinite(checked.getTime())) {
+      briefingNote.firstChild.nodeValue = `브리핑 갱신 확인 ${snapshotTime.format(checked)} (한국시간) · 출처별 갱신 상태는 각 항목에서 확인할 수 있습니다. `;
+    }
+    const read = (value, keys = []) => value ? Response.json({...value,_refresh:statusLine(data,keys)}) : unavailable();
     const address = new URL(path, document.baseURI);
-    switch (address.pathname.split('/api/').at(-1)) {
-      case 'exports':
-        return read(data.checked && {items: data.exports, checked_at: data.checked});
-      case 'disclosures':
-        return address.searchParams.has('corp_code')
-          ? unavailable('공개판은 수집한 코스피·코스닥 공시를 표시합니다. 기업별 전체 조회는 DART에서 가능합니다.')
-          : read(data.dart);
-      case 'sec':
-        return read(data.sec?.[symbolFor(address.searchParams.get('symbol'))]);
-      case 'sec/analysis':
-        return read(data.analysis?.[symbolFor(address.searchParams.get('symbol'))]);
-      case 'research/filing':
-        return read(data.filing);
-      case 'research/industry':
-        return read(data.industry);
-      case 'research/sector':
-        return read(data.sector);
-      case 'nvda/daily':
-        return data.market ? read(data.market)
-          : unavailable('공개판에 NVDA 종가·전망 수집본이 없습니다. 새 종가와 예측은 Kronos 서버 실행본에서 조회할 수 있습니다.');
-      case 'nvda/forecast':
-        return read(data.forecast);
-      default:
-        return unavailable();
+    const symbol = symbolFor(address.searchParams.get('symbol'));
+    switch(address.pathname.split('/api/').at(-1)) {
+      case 'exports': return read({items:data.exports,checked_at:data.checked},['exports:8542','exports:3304']);
+      case 'disclosures': return address.searchParams.has('corp_code') ? unavailable('공개판은 수집한 코스피·코스닥 공시를 표시합니다. 기업별 전체 조회는 DART에서 가능합니다.') : read(data.dart,['dart']);
+      case 'sec': return read(data.sec?.[symbol],['sec:'+symbol]);
+      case 'sec/analysis': return read(data.analysis?.[symbol],['analysis:'+symbol]);
+      case 'research/filing': return read(data.filing,['analysis:NVDA']);
+      case 'research/industry': return read(data.industry,['exports:8542','production']);
+      case 'research/sector': return read(data.sector,['sector']);
+      case 'nvda/daily': return data.market ? read({...data.market,forecast_message:data.market.forecast_message || (!data.market.revision || data.forecast?.revision !== data.market.revision ? '현재 종가에 대응하는 Kronos 예측이 아직 없습니다.' : '')},['market','forecast']) : unavailable();
+      case 'nvda/forecast': return data.forecast?.revision && data.forecast.revision === data.market?.revision ? read(data.forecast,['forecast']) : unavailable('현재 종가에 대응하는 예측이 없습니다.');
+      default: return unavailable();
     }
   };
 })();

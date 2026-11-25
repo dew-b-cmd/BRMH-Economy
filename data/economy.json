@@ -1,0 +1,563 @@
+{
+  "checked": "2026-11-25T05:34:29+00:00",
+  "exports": [
+    {
+      "hs_code": "8542",
+      "label": "전자집적회로",
+      "status": "ok",
+      "month": "202610",
+      "value_usd": 40020898731,
+      "comparison_month": "202510",
+      "comparison_usd": 13175851662,
+      "yoy_percent": 203.74
+    },
+    {
+      "hs_code": "3304",
+      "label": "미용·기초화장용 제품류",
+      "status": "ok",
+      "month": "202610",
+      "value_usd": 1154893360,
+      "comparison_month": "202510",
+      "comparison_usd": 753261812,
+      "yoy_percent": 53.32
+    }
+  ],
+  "dart": {
+    "items": [
+      {
+        "receipt": "20261125900306",
+        "received": "20261125",
+        "company": "크리스탈신소재",
+        "report": "주주명부폐쇄기간또는기준일설정              ",
+        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261125900306"
+      },
+      {
+        "receipt": "20261125900305",
+        "received": "20261125",
+        "company": "한국가구",
+        "report": "주식소각결정              ",
+        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261125900305"
+      },
+      {
+        "receipt": "20261125900303",
+        "received": "20261125",
+        "company": "크리스탈신소재",
+        "report": "주주총회소집결의              ",
+        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261125900303"
+      },
+      {
+        "receipt": "20261125800316",
+        "received": "20261125",
+        "company": "KG케미칼",
+        "report": "최대주주등소유주식변동신고서              ",
+        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261125800316"
+      },
+      {
+        "receipt": "20261125800314",
+        "received": "20261125",
+        "company": "영진약품",
+        "report": "단기차입금증가결정              ",
+        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261125800314"
+      },
+      {
+        "receipt": "20261125800307",
+        "received": "20261125",
+        "company": "현대건설",
+        "report": "단일판매ㆍ공급계약체결              ",
+        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261125800307"
+      },
+      {
+        "receipt": "20261125800299",
+        "received": "20261125",
+        "company": "SK",
+        "report": "기타경영사항(자율공시)              ",
+        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261125800299"
+      },
+      {
+        "receipt": "20261125000395",
+        "received": "20261125",
+        "company": "현대해상",
+        "report": "대규모기업집단현황공시[분기별공시(대표회사용)]",
+        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261125000395"
+      }
+    ],
+    "start": "2026-11-19",
+    "end": "2026-11-25",
+    "checked_at": "2026-11-25T14:34:07+09:00"
+  },
+  "sec": {
+    "NVDA": {
+      "name": "NVIDIA CORP",
+      "cik": "0001045810",
+      "items": [
+        {
+          "form": "8-K",
+          "filed": "2026-11-23",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000090/nvda-20261122.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-11-17",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000088/nvda-20261117.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-11-12",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000082/nvda-20261111.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-09-03",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000078/nvda-20260902.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-08-26",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-08-26",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000073/nvda-20260826.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-08-17",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000069/nvda-20260817.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-07-02",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000060/nvda-20260628.htm"
+        }
+      ],
+      "annual": {
+        "form": "10-K",
+        "filed": "2026-02-25",
+        "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+        "period": "2026-01-25",
+        "accession": "0001045810-26-000021"
+      }
+    },
+    "AAPL": {
+      "name": "Apple Inc.",
+      "cik": "0000320193",
+      "items": [
+        {
+          "form": "8-K",
+          "filed": "2026-11-09",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000114036126042798/ef20085077_8k.htm"
+        },
+        {
+          "form": "10-K",
+          "filed": "2026-11-03",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000026/aapl-20260926.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-11-02",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000024/aapl-20261102.htm"
+        },
+        {
+          "form": "8-K/A",
+          "filed": "2026-09-01",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000114036126035325/ef20081427_8ka.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-07-31",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-07-30",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000018/aapl-20260730.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-05-01",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/aapl-20260328.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-04-30",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000011/aapl-20260430.htm"
+        }
+      ],
+      "annual": {
+        "form": "10-K",
+        "filed": "2026-11-03",
+        "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000026/aapl-20260926.htm",
+        "period": "2026-09-26",
+        "accession": "0000320193-26-000026"
+      }
+    }
+  },
+  "analysis": {
+    "NVDA": {
+      "name": "NVIDIA CORP",
+      "annual": {
+        "form": "10-K",
+        "filed": "2026-02-25",
+        "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+        "period": "2026-01-25",
+        "accession": "0001045810-26-000021"
+      },
+      "metrics": [
+        {
+          "id": "revenue",
+          "label": "매출",
+          "tag": "Revenues",
+          "unit": "USD",
+          "period": "2026-01-25",
+          "value": 215938000000,
+          "prior_period": "2025-01-26",
+          "prior_value": 130497000000,
+          "change_pct": 65.47
+        },
+        {
+          "id": "net_income",
+          "label": "순이익",
+          "tag": "NetIncomeLoss",
+          "unit": "USD",
+          "period": "2026-01-25",
+          "value": 120067000000,
+          "prior_period": "2025-01-26",
+          "prior_value": 72880000000,
+          "change_pct": 64.75
+        }
+      ]
+    },
+    "AAPL": {
+      "name": "Apple Inc.",
+      "annual": {
+        "form": "10-K",
+        "filed": "2026-11-03",
+        "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000026/aapl-20260926.htm",
+        "period": "2026-09-26",
+        "accession": "0000320193-26-000026"
+      },
+      "metrics": [
+        {
+          "id": "revenue",
+          "label": "매출",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "unit": "USD",
+          "period": "2026-09-26",
+          "value": 478834000000,
+          "prior_period": "2025-09-27",
+          "prior_value": 416161000000,
+          "change_pct": 15.06
+        },
+        {
+          "id": "net_income",
+          "label": "순이익",
+          "tag": "NetIncomeLoss",
+          "unit": "USD",
+          "period": "2026-09-26",
+          "value": 132175000000,
+          "prior_period": "2025-09-27",
+          "prior_value": 112010000000,
+          "change_pct": 18.0
+        }
+      ]
+    }
+  },
+  "filing": {
+    "name": "NVIDIA CORP",
+    "annual": {
+      "form": "10-K",
+      "filed": "2026-02-25",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+      "period": "2026-01-25",
+      "accession": "0001045810-26-000021"
+    },
+    "metrics": [
+      {
+        "id": "revenue",
+        "label": "매출",
+        "tag": "Revenues",
+        "unit": "USD",
+        "period": "2026-01-25",
+        "value": 215938000000,
+        "prior_period": "2025-01-26",
+        "prior_value": 130497000000,
+        "change_pct": 65.47
+      },
+      {
+        "id": "net_income",
+        "label": "순이익",
+        "tag": "NetIncomeLoss",
+        "unit": "USD",
+        "period": "2026-01-25",
+        "value": 120067000000,
+        "prior_period": "2025-01-26",
+        "prior_value": 72880000000,
+        "change_pct": 64.75
+      }
+    ]
+  },
+  "industry": {
+    "exports": {
+      "hs_code": "8542",
+      "label": "전자집적회로",
+      "status": "ok",
+      "month": "202610",
+      "value_usd": 40020898731,
+      "comparison_month": "202510",
+      "comparison_usd": 13175851662,
+      "yoy_percent": 203.74
+    },
+    "production": {
+      "month": "2026-10",
+      "value": 136.2966,
+      "source": "https://fred.stlouisfed.org/series/IPG3344S",
+      "yoy_percent": 13.5
+    }
+  },
+  "sector": {
+    "periods": [
+      {
+        "months": 1,
+        "start": "202609",
+        "end": "202609",
+        "industry": 6.01,
+        "market": -0.76,
+        "difference_pp": 6.77
+      },
+      {
+        "months": 3,
+        "start": "202607",
+        "end": "202609",
+        "industry": 5.05,
+        "market": 1.78,
+        "difference_pp": 3.27
+      },
+      {
+        "months": 6,
+        "start": "202604",
+        "end": "202609",
+        "industry": 41.7,
+        "market": 17.14,
+        "difference_pp": 24.56
+      }
+    ],
+    "source": "https://mba.tuck.dartmouth.edu/pages/faculty/Ken.French/data_library.html"
+  },
+  "market": {
+    "origin": "2026-11-24",
+    "close": 155.38,
+    "change_percent": -5.858830657376557,
+    "checked_at": "2026-11-25T05:34:12+00:00",
+    "source": "https://www.nasdaq.com/market-activity/stocks/nvda/historical",
+    "revision": "99d6e767749d98f94f858940e41f751da210024edff7eb6467d99242b2e52c2d",
+    "forecast_message": "",
+    "history": [
+      {
+        "time": "2026-10-14",
+        "actual": 221.3
+      },
+      {
+        "time": "2026-10-15",
+        "actual": 217.23
+      },
+      {
+        "time": "2026-10-16",
+        "actual": 214.13
+      },
+      {
+        "time": "2026-10-19",
+        "actual": 217.09
+      },
+      {
+        "time": "2026-10-20",
+        "actual": 216.47
+      },
+      {
+        "time": "2026-10-21",
+        "actual": 221.97
+      },
+      {
+        "time": "2026-10-22",
+        "actual": 212.21
+      },
+      {
+        "time": "2026-10-23",
+        "actual": 210.96
+      },
+      {
+        "time": "2026-10-26",
+        "actual": 216.0
+      },
+      {
+        "time": "2026-10-27",
+        "actual": 217.94
+      },
+      {
+        "time": "2026-10-28",
+        "actual": 215.38
+      },
+      {
+        "time": "2026-10-29",
+        "actual": 213.66
+      },
+      {
+        "time": "2026-10-30",
+        "actual": 204.64
+      },
+      {
+        "time": "2026-11-02",
+        "actual": 202.06
+      },
+      {
+        "time": "2026-11-03",
+        "actual": 206.69
+      },
+      {
+        "time": "2026-11-04",
+        "actual": 200.13
+      },
+      {
+        "time": "2026-11-05",
+        "actual": 181.6
+      },
+      {
+        "time": "2026-11-06",
+        "actual": 186.64
+      },
+      {
+        "time": "2026-11-09",
+        "actual": 178.67
+      },
+      {
+        "time": "2026-11-10",
+        "actual": 168.89
+      },
+      {
+        "time": "2026-11-11",
+        "actual": 173.73
+      },
+      {
+        "time": "2026-11-12",
+        "actual": 166.19
+      },
+      {
+        "time": "2026-11-13",
+        "actual": 162.85
+      },
+      {
+        "time": "2026-11-16",
+        "actual": 156.14
+      },
+      {
+        "time": "2026-11-17",
+        "actual": 155.46
+      },
+      {
+        "time": "2026-11-18",
+        "actual": 150.96
+      },
+      {
+        "time": "2026-11-19",
+        "actual": 145.98
+      },
+      {
+        "time": "2026-11-20",
+        "actual": 125.53
+      },
+      {
+        "time": "2026-11-23",
+        "actual": 165.05
+      },
+      {
+        "time": "2026-11-24",
+        "actual": 155.38
+      }
+    ]
+  },
+  "forecast": {
+    "rows": [
+      {
+        "time": "2026-11-25",
+        "forecast": 152.24273681640625
+      },
+      {
+        "time": "2026-11-27",
+        "forecast": 147.97586059570312
+      },
+      {
+        "time": "2026-11-30",
+        "forecast": 148.89495849609375
+      },
+      {
+        "time": "2026-12-01",
+        "forecast": 154.52142333984375
+      },
+      {
+        "time": "2026-12-02",
+        "forecast": 163.21612548828125
+      }
+    ],
+    "origin": "2026-11-24",
+    "revision": "99d6e767749d98f94f858940e41f751da210024edff7eb6467d99242b2e52c2d",
+    "model": "NeoQuasar/Kronos-small",
+    "model_revision": "901c26c1332695a2a8f243eb2f37243a37bea320"
+  },
+  "refresh": {
+    "market": {
+      "state": "ok",
+      "last_success": "2026-11-25T05:34:11+00:00",
+      "last_attempt": "2026-11-25T05:34:11+00:00"
+    },
+    "forecast": {
+      "state": "ok",
+      "last_success": "2026-11-25T05:34:12+00:00",
+      "last_attempt": "2026-11-25T05:34:12+00:00"
+    },
+    "dart": {
+      "state": "ok",
+      "last_success": "2026-11-25T05:34:07+00:00",
+      "last_attempt": "2026-11-25T05:34:07+00:00"
+    },
+    "exports:8542": {
+      "state": "ok",
+      "last_success": "2026-11-25T05:34:06+00:00",
+      "last_attempt": "2026-11-25T05:34:06+00:00"
+    },
+    "exports:3304": {
+      "state": "ok",
+      "last_success": "2026-11-25T05:34:07+00:00",
+      "last_attempt": "2026-11-25T05:34:07+00:00"
+    },
+    "sec:NVDA": {
+      "state": "ok",
+      "last_success": "2026-11-25T05:34:07+00:00",
+      "last_attempt": "2026-11-25T05:34:07+00:00"
+    },
+    "sec:AAPL": {
+      "state": "ok",
+      "last_success": "2026-11-25T05:34:08+00:00",
+      "last_attempt": "2026-11-25T05:34:08+00:00"
+    },
+    "analysis:NVDA": {
+      "state": "ok",
+      "last_success": "2026-11-25T05:34:07+00:00",
+      "last_attempt": "2026-11-25T05:34:07+00:00"
+    },
+    "analysis:AAPL": {
+      "state": "ok",
+      "last_success": "2026-11-25T05:34:08+00:00",
+      "last_attempt": "2026-11-25T05:34:08+00:00"
+    },
+    "production": {
+      "state": "ok",
+      "last_success": "2026-11-25T05:34:08+00:00",
+      "last_attempt": "2026-11-25T05:34:08+00:00"
+    },
+    "sector": {
+      "state": "ok",
+      "last_success": "2026-11-25T05:34:09+00:00",
+      "last_attempt": "2026-11-25T05:34:09+00:00"
+    }
+  }
+}

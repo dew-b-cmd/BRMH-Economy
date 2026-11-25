@@ -56,6 +56,7 @@
       if (!response.ok) throw new Error(data.message || '자료를 읽지 못했습니다.');
       status.textContent = '';
       render(data, content, status);
+      window.economyRefreshStatus(data, status);
     } catch (error) {
       status.textContent = error.name === 'TimeoutError' ? '응답이 지연되고 있습니다. 다시 조회하세요.' : error.message;
     }
