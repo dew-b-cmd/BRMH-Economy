@@ -32,6 +32,13 @@ h3{font-size:20px;margin-bottom:7px}
 .export-value{font-size:23px;display:block;line-height:1.35}
 .feed form{display:flex;align-items:end;gap:8px;flex-wrap:wrap}
 .feed form input{width:178px}
+.filing-filter{flex-basis:100%;font-size:13px}
+.filing-filter summary{cursor:pointer;color:var(--teal);margin-bottom:8px}
+.filing-filter .search{display:inline-flex;align-items:center;gap:6px;margin:0 6px 6px 0}
+.feed form .filing-filter input,.filing-filter select{width:auto;max-width:100%;font:inherit}
+.filing-filter select{border:1px solid var(--line);border-radius:8px;padding:7px 9px;background:#fff;color:inherit}
+.filing-pagination{display:flex;align-items:center;gap:8px;margin:8px 0;font-size:13px}
+.filing-pagination[hidden]{display:none}
 .archive{margin:13px 0}
 .archive summary{color:var(--muted);cursor:pointer}
 .archive .research-grid{margin-top:10px}

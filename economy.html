@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="disclosure-api" content="">
   <title>Kronos 경제 리서치</title>
   <link rel="stylesheet" href="style.css">
   <script src="kronos-pages.js" defer></script>
@@ -37,29 +38,43 @@
         <article class="card feed">
           <h2>최근 OpenDART 공시</h2>
           <form id="disclosure-search">
-            <label class="search">기업 고유번호 <input id="corp-code" type="text" inputmode="numeric" maxlength="8" pattern="[0-9]{8}" placeholder="8자리 · 비우면 전체"></label>
+            <label class="search">기업명 또는 코드 <input id="corp-code" type="text" maxlength="64" placeholder="삼성전자, 005930, 00126380"></label>
             <button type="submit">조회</button>
+            <details class="filing-filter">
+              <summary>조회 기간 · 공시 유형</summary>
+              <label class="search">시작일 <input id="dart-start" type="date"></label>
+              <label class="search">종료일 <input id="dart-end" type="date"></label>
+              <label class="search">유형 <select id="dart-type"><option value="">전체</option><option value="A">정기공시</option><option value="B">주요사항보고</option><option value="C">발행공시</option><option value="D">지분공시</option><option value="E">기타공시</option><option value="F">외부감사관련</option><option value="G">펀드공시</option><option value="H">자산유동화</option><option value="I">거래소공시</option><option value="J">공정위공시</option></select></label>
+            </details>
           </form>
           <p id="disclosures-status" class="fine" role="status"></p>
           <ul class="feed-list" id="disclosures-list"></ul>
+          <nav class="filing-pagination" id="dart-pages" aria-label="OpenDART 공시 페이지" hidden></nav>
           <a href="https://dart.fss.or.kr/" target="_blank" rel="noopener noreferrer">DART 공시 검색</a>
         </article>
         <article class="card feed">
           <h2>미국 SEC 공시</h2>
           <form id="sec-search">
             <label class="search">미국 종목 티커 또는 CIK
-              <input id="sec-symbol" type="text" value="AAPL" placeholder="예: AAPL, NVDA" maxlength="12" required>
+              <input id="sec-symbol" type="text" value="AAPL" placeholder="예: LUNR, NVDA" maxlength="15" required>
             </label>
             <button type="submit">조회</button>
+            <details class="filing-filter">
+              <summary>조회 기간 · 공시 유형</summary>
+              <label class="search">시작일 <input id="sec-start" type="date"></label>
+              <label class="search">종료일 <input id="sec-end" type="date"></label>
+              <label class="search">유형 <select id="sec-type"><option value="">전체</option><option value="10-K">10-K 연차보고서</option><option value="10-Q">10-Q 분기보고서</option><option value="8-K">8-K 주요사항</option><option value="20-F">20-F 연차보고서</option><option value="40-F">40-F 연차보고서</option><option value="6-K">6-K 외국기업 공시</option><option value="S-1">S-1 등록신고서</option><option value="DEF 14A">DEF 14A 위임장 자료</option></select></label>
+            </details>
           </form>
           <p id="sec-status" class="fine" role="status"></p>
           <ul class="feed-list" id="sec-list"></ul>
+          <nav class="filing-pagination" id="sec-pages" aria-label="SEC 공시 페이지" hidden></nav>
           <div class="feed-entry">
             <button id="sec-analysis-button" type="button" disabled>연간 실적 분석</button>
             <p id="sec-analysis-status" class="fine" role="status"></p>
             <div id="sec-analysis-list"></div>
           </div>
-          <a href="https://www.sec.gov/edgar/search/" target="_blank" rel="noopener noreferrer">SEC EDGAR 공시 검색</a>
+          <a id="sec-official" href="https://www.sec.gov/edgar/search/" target="_blank" rel="noopener noreferrer">SEC EDGAR 공시 검색</a>
         </article>
       </div>
       <details class="archive">
