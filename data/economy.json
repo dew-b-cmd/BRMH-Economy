@@ -1,5 +1,5 @@
 {
-  "checked": "2026-11-26T01:53:18+00:00",
+  "checked": "2026-11-26T02:10:56+00:00",
   "exports": [
     {
       "hs_code": "8542",
@@ -25,6 +25,13 @@
   "dart": {
     "items": [
       {
+        "receipt": "20261126900187",
+        "received": "20261126",
+        "company": "SGC E&C",
+        "report": "단일판매ㆍ공급계약체결(자율공시)              ",
+        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126900187"
+      },
+      {
         "receipt": "20261126900171",
         "received": "20261126",
         "company": "셀루메드",
@@ -39,20 +46,6 @@
         "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126900163"
       },
       {
-        "receipt": "20261126900149",
-        "received": "20261126",
-        "company": "비츠로시스",
-        "report": "전환가액의조정              ",
-        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126900149"
-      },
-      {
-        "receipt": "20261126900147",
-        "received": "20261126",
-        "company": "케이아이엔엑스",
-        "report": "조회공시요구(풍문또는보도)에대한답변(미확정)              ",
-        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126900147"
-      },
-      {
         "receipt": "20261126800186",
         "received": "20261126",
         "company": "삼성SDI",
@@ -60,30 +53,37 @@
         "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126800186"
       },
       {
-        "receipt": "20261126800168",
+        "receipt": "20261126000210",
         "received": "20261126",
-        "company": "한국콜마",
-        "report": "기업설명회(IR)개최(안내공시)              ",
-        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126800168"
+        "company": "유진증권",
+        "report": "일괄신고추가서류(파생결합증권-주가연계증권)",
+        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126000210"
       },
       {
-        "receipt": "20261126000193",
+        "receipt": "20261126000202",
         "received": "20261126",
-        "company": "유라클",
-        "report": "주식등의대량보유상황보고서(일반)",
-        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126000193"
+        "company": "칩스앤미디어",
+        "report": "신탁계약해지결과보고서",
+        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126000202"
       },
       {
-        "receipt": "20261126000182",
+        "receipt": "20261126000200",
         "received": "20261126",
-        "company": "AJ네트웍스",
-        "report": "주요사항보고서(자기주식취득신탁계약체결결정)",
-        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126000182"
+        "company": "제이에스링크",
+        "report": "임원ㆍ주요주주특정증권등소유상황보고서",
+        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126000200"
+      },
+      {
+        "receipt": "20261126000199",
+        "received": "20261126",
+        "company": "한국가구",
+        "report": "신탁계약해지결과보고서",
+        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126000199"
       }
     ],
     "start": "2026-11-20",
     "end": "2026-11-26",
-    "checked_at": "2026-11-26T10:53:13+09:00"
+    "checked_at": "2026-11-26T11:10:46+09:00"
   },
   "sec": {
     "NVDA": {
@@ -345,18 +345,14 @@
     "source": "https://mba.tuck.dartmouth.edu/pages/faculty/Ken.French/data_library.html"
   },
   "market": {
-    "origin": "2026-11-24",
-    "close": 155.38,
-    "change_percent": -5.858830657376557,
-    "checked_at": "2026-11-25T19:57:02+00:00",
+    "origin": "2026-11-25",
+    "close": 149.3,
+    "change_percent": -3.9129875144806148,
+    "checked_at": "2026-11-26T02:10:52+00:00",
     "source": "https://www.nasdaq.com/market-activity/stocks/nvda/historical",
-    "revision": "99d6e767749d98f94f858940e41f751da210024edff7eb6467d99242b2e52c2d",
+    "revision": "c7ccd5d59cb9ae20a4f9773906d994d0c42a5b9ad4a64e91a5ab8e8b73aca249",
     "forecast_message": "",
     "history": [
-      {
-        "time": "2026-10-14",
-        "actual": 221.3
-      },
       {
         "time": "2026-10-15",
         "actual": 217.23
@@ -472,92 +468,96 @@
       {
         "time": "2026-11-24",
         "actual": 155.38
+      },
+      {
+        "time": "2026-11-25",
+        "actual": 149.3
       }
     ]
   },
   "forecast": {
     "rows": [
       {
-        "time": "2026-11-25",
-        "forecast": 152.2427215576172
-      },
-      {
         "time": "2026-11-27",
-        "forecast": 147.97586059570312
+        "forecast": 149.16091918945312
       },
       {
         "time": "2026-11-30",
-        "forecast": 148.89495849609375
+        "forecast": 149.62728881835938
       },
       {
         "time": "2026-12-01",
-        "forecast": 154.52142333984375
+        "forecast": 147.340576171875
       },
       {
         "time": "2026-12-02",
-        "forecast": 163.2161407470703
+        "forecast": 153.0073699951172
+      },
+      {
+        "time": "2026-12-03",
+        "forecast": 162.83316040039062
       }
     ],
-    "origin": "2026-11-24",
-    "revision": "99d6e767749d98f94f858940e41f751da210024edff7eb6467d99242b2e52c2d",
+    "origin": "2026-11-25",
+    "revision": "c7ccd5d59cb9ae20a4f9773906d994d0c42a5b9ad4a64e91a5ab8e8b73aca249",
     "model": "NeoQuasar/Kronos-small",
     "model_revision": "901c26c1332695a2a8f243eb2f37243a37bea320"
   },
   "refresh": {
     "market": {
-      "state": "cached",
-      "last_success": "2026-11-25T19:56:59+00:00",
-      "last_attempt": "2026-11-26T01:53:14+00:00"
+      "state": "ok",
+      "last_success": "2026-11-26T02:10:48+00:00",
+      "last_attempt": "2026-11-26T02:10:48+00:00"
     },
     "forecast": {
-      "state": "pending",
-      "last_success": "2026-11-25T05:41:38+00:00",
-      "last_attempt": "2026-11-26T01:53:17+00:00"
+      "state": "ok",
+      "last_success": "2026-11-26T02:10:52+00:00",
+      "last_attempt": "2026-11-26T02:10:52+00:00"
     },
     "dart": {
       "state": "ok",
-      "last_success": "2026-11-26T01:53:12+00:00",
-      "last_attempt": "2026-11-26T01:53:12+00:00"
+      "last_success": "2026-11-26T02:10:46+00:00",
+      "last_attempt": "2026-11-26T02:10:46+00:00"
     },
     "exports:8542": {
       "state": "ok",
-      "last_success": "2026-11-26T01:53:09+00:00",
-      "last_attempt": "2026-11-26T01:53:09+00:00"
+      "last_success": "2026-11-26T02:10:43+00:00",
+      "last_attempt": "2026-11-26T02:10:43+00:00"
     },
     "exports:3304": {
       "state": "ok",
-      "last_success": "2026-11-26T01:53:11+00:00",
-      "last_attempt": "2026-11-26T01:53:11+00:00"
+      "last_success": "2026-11-26T02:10:44+00:00",
+      "last_attempt": "2026-11-26T02:10:44+00:00"
     },
     "sec:NVDA": {
       "state": "ok",
-      "last_success": "2026-11-26T01:53:13+00:00",
-      "last_attempt": "2026-11-26T01:53:13+00:00"
+      "last_success": "2026-11-26T02:10:46+00:00",
+      "last_attempt": "2026-11-26T02:10:46+00:00"
     },
     "sec:AAPL": {
       "state": "ok",
-      "last_success": "2026-11-26T01:53:14+00:00",
-      "last_attempt": "2026-11-26T01:53:14+00:00"
+      "last_success": "2026-11-26T02:10:47+00:00",
+      "last_attempt": "2026-11-26T02:10:47+00:00"
     },
     "analysis:NVDA": {
       "state": "ok",
-      "last_success": "2026-11-26T01:53:13+00:00",
-      "last_attempt": "2026-11-26T01:53:13+00:00"
+      "last_success": "2026-11-26T02:10:47+00:00",
+      "last_attempt": "2026-11-26T02:10:47+00:00"
     },
     "analysis:AAPL": {
       "state": "ok",
-      "last_success": "2026-11-26T01:53:14+00:00",
-      "last_attempt": "2026-11-26T01:53:14+00:00"
+      "last_success": "2026-11-26T02:10:47+00:00",
+      "last_attempt": "2026-11-26T02:10:47+00:00"
     },
     "production": {
       "state": "ok",
-      "last_success": "2026-11-26T01:53:14+00:00",
-      "last_attempt": "2026-11-26T01:53:14+00:00"
+      "last_success": "2026-11-26T02:10:47+00:00",
+      "last_attempt": "2026-11-26T02:10:47+00:00"
     },
     "sector": {
       "state": "ok",
-      "last_success": "2026-11-26T01:53:14+00:00",
-      "last_attempt": "2026-11-26T01:53:14+00:00"
+      "last_success": "2026-11-26T02:10:47+00:00",
+      "last_attempt": "2026-11-26T02:10:47+00:00"
     }
   }
 }
