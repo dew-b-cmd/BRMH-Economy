@@ -30,6 +30,8 @@
     return data;
   }
   async function lookup(route, q, source, options, apiParams) {
+    const dart = route === '/v1/dart/filings';
+    if (dart && !gatewayRoot) return window.dartPagesRequest(apiParams, options.signal, false);
     let failure;
     try {
       const target = new URL(route, gatewayRoot);
@@ -41,18 +43,21 @@
       failure = Response.json({ status: 'error', code: 'gateway_unavailable', source_url: source,
         message: '공시 검색 서버에 연결하지 못했습니다. 아래 공식 사이트에서 확인해 주세요.' }, { status: 503 });
     }
-    // The briefing stores a few SEC issuers. Only an exact, unfiltered match may be shown as a fallback.
-    if (route === '/v1/sec/filings' && !apiParams.start && !apiParams.end && !apiParams.type && Number(apiParams.page || 1) === 1) {
+    if (dart) return window.dartPagesRequest(apiParams, options.signal, true);
+    // Use a stored SEC result only for the exact issuer and default search.
+    if (!apiParams.start && !apiParams.end && !apiParams.type && Number(apiParams.page || 1) === 1) {
       try {
         const snapshot = await readSnapshot(options);
         const normalized = q.trim().toUpperCase();
         const entry = Object.entries(snapshot.sec ?? {}).find(([symbol, item]) =>
           symbol === normalized || (/^[0-9]{1,10}$/.test(normalized) && item.cik === normalized.padStart(10,'0')));
-        if (entry) {
+        const analysis = route === '/v1/sec/analysis';
+        const item = entry && (analysis ? snapshot.analysis?.[entry[0]] : entry[1]);
+        if (item) {
           const problem = await failure.clone().json();
-          return Response.json({ ...entry[1], annual: null,
+          return Response.json({ ...item,
           source_url: `https://www.sec.gov/edgar/browse/?CIK=${Number(entry[1].cik)}&owner=exclude`,
-          _refresh: `${problem.message} · 해당 기업의 저장 공시 · ${statusLine(snapshot, ['sec:' + entry[0]])}` });
+          _refresh: `${gatewayRoot ? problem.message + ' · ' : ''}해당 기업의 저장 공시 · ${statusLine(snapshot, [(analysis ? 'analysis:' : 'sec:') + entry[0]])}` });
         }
       } catch { /* Keep the gateway's error when the snapshot is unavailable. */ }
     }

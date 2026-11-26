@@ -71,12 +71,14 @@ jobs:
         env:
           OPENDART_API_KEY: ${{ secrets.OPENDART_API_KEY }}
           SEC_CONTACT_EMAIL: ${{ secrets.SEC_CONTACT_EMAIL }}
-        run: python scripts/build_disclosure_catalog.py
+        run: |
+          python scripts/build_disclosure_catalog.py
+          python scripts/build_dart_search.py
       - name: Persist snapshot
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/economy.json data.js data/disclosure-catalog
+          git add data/economy.json data.js data/disclosure-catalog data/dart-recent
           if ! git diff --cached --quiet; then
             git commit -m 'Refresh economy snapshots'
             git push origin HEAD:main
@@ -90,14 +92,15 @@ jobs:
           cp *.html *.css *.js *.pdf kronos-source.zip _site/
           cp data/economy.json _site/data/
           cp -R data/disclosure-catalog _site/data/
+          cp -R data/dart-recent _site/data/
           python - <<'PY'
           import os
           from pathlib import Path
           import re
 
           gateway = os.environ.get('DISCLOSURE_API_URL', '').rstrip('/')
-          if not re.fullmatch(r'https://brmh-economy-disclosures\.[a-z0-9-]+\.workers\.dev', gateway):
-              raise SystemExit('Set DISCLOSURE_API_URL to the deployed Worker address before publishing Pages')
+          if gateway and not re.fullmatch(r'https://brmh-economy-disclosures\.[a-z0-9-]+\.workers\.dev', gateway):
+              raise SystemExit('Invalid DISCLOSURE_API_URL format')
           dashboard = Path('_site/economy.html')
           placeholder = '<meta name="disclosure-api" content="">'
           html = dashboard.read_text(encoding='utf-8')
@@ -141,7 +144,8 @@ jobs:
           curl --fail --retry 5 --retry-all-errors "${PAGE_URL%/}/economy.html" -o /tmp/economy-dashboard.html
           grep -Fq 'lecture.pdf' /tmp/economy-home.html
           grep -Fq 'kronos-pages.js' /tmp/economy-dashboard.html
-          grep -Fq 'name="disclosure-api" content="https://' /tmp/economy-dashboard.html
+          grep -Fq 'dart-pages.js' /tmp/economy-dashboard.html
+          curl --fail --retry 5 --retry-all-errors "${PAGE_URL%/}/data/dart-recent/status.json?run=$GITHUB_RUN_ID" | python -m json.tool >/dev/null
           for provider in dart sec; do
             curl --fail --retry 5 --retry-all-errors "${PAGE_URL%/}/data/disclosure-catalog/$provider-updated.json?run=$GITHUB_RUN_ID" | python -m json.tool >/dev/null
           done

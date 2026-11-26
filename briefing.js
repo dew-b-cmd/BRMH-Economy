@@ -179,9 +179,10 @@
       : '비교에 사용할 연간 SEC 수치를 찾지 못했습니다.';
     for (const metric of data.metrics) {
       const entry = node('div', '', 'feed-entry');
-      entry.append(node('b', metric.label + ' · ' + metric.unit + ' ' + usd.format(metric.value)));
+      const unit = metric.unit || 'USD';
+      entry.append(node('b', metric.label + ' · ' + unit + ' ' + usd.format(metric.value)));
       if (metric.prior_value !== null) {
-        entry.append(node('small', '전년 ' + metric.prior_period + ' · ' + metric.unit + ' ' + usd.format(metric.prior_value)));
+        entry.append(node('small', '전년 ' + metric.prior_period + ' · ' + unit + ' ' + usd.format(metric.prior_value)));
       }
       const change = metric.change_pct === null ? '전년 대비 증감률을 표시할 수 없습니다.'
         : '전년 대비 ' + percent.format(metric.change_pct) + '%';
