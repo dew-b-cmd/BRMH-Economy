@@ -1,5 +1,5 @@
 {
-  "checked": "2026-11-26T02:10:56+00:00",
+  "checked": "2026-11-26T04:09:57+00:00",
   "exports": [
     {
       "hs_code": "8542",
@@ -25,65 +25,65 @@
   "dart": {
     "items": [
       {
-        "receipt": "20261126900187",
+        "receipt": "20261126900232",
         "received": "20261126",
-        "company": "SGC E&C",
-        "report": "단일판매ㆍ공급계약체결(자율공시)              ",
-        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126900187"
+        "company": "덕산하이메탈",
+        "report": "대표이사변경              ",
+        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126900232"
       },
       {
-        "receipt": "20261126900171",
+        "receipt": "20261126900227",
         "received": "20261126",
-        "company": "셀루메드",
-        "report": "조회공시요구(풍문또는보도)에대한답변(미확정)              ",
-        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126900171"
-      },
-      {
-        "receipt": "20261126900163",
-        "received": "20261126",
-        "company": "우원개발",
+        "company": "엑시콘",
         "report": "단일판매ㆍ공급계약체결              ",
-        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126900163"
+        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126900227"
       },
       {
-        "receipt": "20261126800186",
+        "receipt": "20261126000270",
         "received": "20261126",
-        "company": "삼성SDI",
-        "report": "주식소각결정              ",
-        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126800186"
+        "company": "동국홀딩스",
+        "report": "대규모기업집단현황공시[분기별공시(대표회사용)]",
+        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126000270"
       },
       {
-        "receipt": "20261126000210",
+        "receipt": "20261126000269",
         "received": "20261126",
-        "company": "유진증권",
-        "report": "일괄신고추가서류(파생결합증권-주가연계증권)",
-        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126000210"
+        "company": "DB증권",
+        "report": "투자설명서(일괄신고)",
+        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126000269"
       },
       {
-        "receipt": "20261126000202",
+        "receipt": "20261126000267",
         "received": "20261126",
-        "company": "칩스앤미디어",
-        "report": "신탁계약해지결과보고서",
-        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126000202"
+        "company": "DB증권",
+        "report": "투자설명서(일괄신고)",
+        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126000267"
       },
       {
-        "receipt": "20261126000200",
+        "receipt": "20261126000266",
         "received": "20261126",
-        "company": "제이에스링크",
-        "report": "임원ㆍ주요주주특정증권등소유상황보고서",
-        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126000200"
+        "company": "현대차증권",
+        "report": "투자설명서(일괄신고)",
+        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126000266"
       },
       {
-        "receipt": "20261126000199",
+        "receipt": "20261126000264",
         "received": "20261126",
-        "company": "한국가구",
-        "report": "신탁계약해지결과보고서",
-        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126000199"
+        "company": "교보증권",
+        "report": "투자설명서(일괄신고)",
+        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126000264"
+      },
+      {
+        "receipt": "20261126000263",
+        "received": "20261126",
+        "company": "한화투자증권",
+        "report": "투자설명서(일괄신고)",
+        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126000263"
       }
     ],
     "start": "2026-11-20",
     "end": "2026-11-26",
-    "checked_at": "2026-11-26T11:10:46+09:00"
+    "checked_at": "2026-11-26T13:09:52+09:00"
   },
   "sec": {
     "NVDA": {
@@ -348,7 +348,7 @@
     "origin": "2026-11-25",
     "close": 149.3,
     "change_percent": -3.9129875144806148,
-    "checked_at": "2026-11-26T02:10:52+00:00",
+    "checked_at": "2026-11-26T04:09:56+00:00",
     "source": "https://www.nasdaq.com/market-activity/stocks/nvda/historical",
     "revision": "c7ccd5d59cb9ae20a4f9773906d994d0c42a5b9ad4a64e91a5ab8e8b73aca249",
     "forecast_message": "",
@@ -506,8 +506,8 @@
   "refresh": {
     "market": {
       "state": "ok",
-      "last_success": "2026-11-26T02:10:48+00:00",
-      "last_attempt": "2026-11-26T02:10:48+00:00"
+      "last_success": "2026-11-26T04:09:53+00:00",
+      "last_attempt": "2026-11-26T04:09:53+00:00"
     },
     "forecast": {
       "state": "ok",
@@ -516,8 +516,8 @@
     },
     "dart": {
       "state": "ok",
-      "last_success": "2026-11-26T02:10:46+00:00",
-      "last_attempt": "2026-11-26T02:10:46+00:00"
+      "last_success": "2026-11-26T04:09:52+00:00",
+      "last_attempt": "2026-11-26T04:09:52+00:00"
     },
     "exports:8542": {
       "state": "ok",
@@ -531,13 +531,13 @@
     },
     "sec:NVDA": {
       "state": "ok",
-      "last_success": "2026-11-26T02:10:46+00:00",
-      "last_attempt": "2026-11-26T02:10:46+00:00"
+      "last_success": "2026-11-26T04:09:52+00:00",
+      "last_attempt": "2026-11-26T04:09:52+00:00"
     },
     "sec:AAPL": {
       "state": "ok",
-      "last_success": "2026-11-26T02:10:47+00:00",
-      "last_attempt": "2026-11-26T02:10:47+00:00"
+      "last_success": "2026-11-26T04:09:53+00:00",
+      "last_attempt": "2026-11-26T04:09:53+00:00"
     },
     "analysis:NVDA": {
       "state": "ok",
