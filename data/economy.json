@@ -1,5 +1,5 @@
 {
-  "checked": "2026-11-25T19:57:04+00:00",
+  "checked": "2026-11-26T01:53:18+00:00",
   "exports": [
     {
       "hs_code": "8542",
@@ -25,65 +25,65 @@
   "dart": {
     "items": [
       {
-        "receipt": "20261125000790",
+        "receipt": "20261126900171",
         "received": "20261126",
-        "company": "아티스트컴퍼니",
-        "report": "[기재정정]주요사항보고서(영업양도결정)",
-        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261125000790"
+        "company": "셀루메드",
+        "report": "조회공시요구(풍문또는보도)에대한답변(미확정)              ",
+        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126900171"
       },
       {
-        "receipt": "20261125900807",
-        "received": "20261125",
-        "company": "콜마비앤에이치",
-        "report": "중간(분기)배당락              ",
-        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261125900807"
+        "receipt": "20261126900163",
+        "received": "20261126",
+        "company": "우원개발",
+        "report": "단일판매ㆍ공급계약체결              ",
+        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126900163"
       },
       {
-        "receipt": "20261125900792",
-        "received": "20261125",
-        "company": "유안타제16호스팩",
-        "report": "주권매매거래정지              (상장폐지 사유발생)",
-        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261125900792"
+        "receipt": "20261126900149",
+        "received": "20261126",
+        "company": "비츠로시스",
+        "report": "전환가액의조정              ",
+        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126900149"
       },
       {
-        "receipt": "20261125900789",
-        "received": "20261125",
-        "company": "SK증권제12호스팩",
-        "report": "주권매매거래정지              (상장폐지 사유발생)",
-        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261125900789"
+        "receipt": "20261126900147",
+        "received": "20261126",
+        "company": "케이아이엔엑스",
+        "report": "조회공시요구(풍문또는보도)에대한답변(미확정)              ",
+        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126900147"
       },
       {
-        "receipt": "20261125900786",
-        "received": "20261125",
-        "company": "서희건설",
-        "report": "타인에대한채무보증결정              ",
-        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261125900786"
+        "receipt": "20261126800186",
+        "received": "20261126",
+        "company": "삼성SDI",
+        "report": "주식소각결정              ",
+        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126800186"
       },
       {
-        "receipt": "20261125900782",
-        "received": "20261125",
-        "company": "우진비앤지",
-        "report": "최대주주변경              ",
-        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261125900782"
+        "receipt": "20261126800168",
+        "received": "20261126",
+        "company": "한국콜마",
+        "report": "기업설명회(IR)개최(안내공시)              ",
+        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126800168"
       },
       {
-        "receipt": "20261125900774",
-        "received": "20261125",
-        "company": "우진비앤지",
-        "report": "증권발행결과(자율공시)              ",
-        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261125900774"
+        "receipt": "20261126000193",
+        "received": "20261126",
+        "company": "유라클",
+        "report": "주식등의대량보유상황보고서(일반)",
+        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126000193"
       },
       {
-        "receipt": "20261125800766",
-        "received": "20261125",
-        "company": "SK하이닉스",
-        "report": "기업가치제고계획(자율공시)              ",
-        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261125800766"
+        "receipt": "20261126000182",
+        "received": "20261126",
+        "company": "AJ네트웍스",
+        "report": "주요사항보고서(자기주식취득신탁계약체결결정)",
+        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126000182"
       }
     ],
     "start": "2026-11-20",
     "end": "2026-11-26",
-    "checked_at": "2026-11-26T04:56:59+09:00"
+    "checked_at": "2026-11-26T10:53:13+09:00"
   },
   "sec": {
     "NVDA": {
@@ -505,59 +505,59 @@
   },
   "refresh": {
     "market": {
-      "state": "ok",
+      "state": "cached",
       "last_success": "2026-11-25T19:56:59+00:00",
-      "last_attempt": "2026-11-25T19:56:59+00:00"
+      "last_attempt": "2026-11-26T01:53:14+00:00"
     },
     "forecast": {
-      "state": "ok",
+      "state": "pending",
       "last_success": "2026-11-25T05:41:38+00:00",
-      "last_attempt": "2026-11-25T05:41:38+00:00"
+      "last_attempt": "2026-11-26T01:53:17+00:00"
     },
     "dart": {
       "state": "ok",
-      "last_success": "2026-11-25T19:56:58+00:00",
-      "last_attempt": "2026-11-25T19:56:58+00:00"
+      "last_success": "2026-11-26T01:53:12+00:00",
+      "last_attempt": "2026-11-26T01:53:12+00:00"
     },
     "exports:8542": {
       "state": "ok",
-      "last_success": "2026-11-25T05:41:30+00:00",
-      "last_attempt": "2026-11-25T05:41:30+00:00"
+      "last_success": "2026-11-26T01:53:09+00:00",
+      "last_attempt": "2026-11-26T01:53:09+00:00"
     },
     "exports:3304": {
       "state": "ok",
-      "last_success": "2026-11-25T05:41:31+00:00",
-      "last_attempt": "2026-11-25T05:41:31+00:00"
+      "last_success": "2026-11-26T01:53:11+00:00",
+      "last_attempt": "2026-11-26T01:53:11+00:00"
     },
     "sec:NVDA": {
       "state": "ok",
-      "last_success": "2026-11-25T19:56:59+00:00",
-      "last_attempt": "2026-11-25T19:56:59+00:00"
+      "last_success": "2026-11-26T01:53:13+00:00",
+      "last_attempt": "2026-11-26T01:53:13+00:00"
     },
     "sec:AAPL": {
       "state": "ok",
-      "last_success": "2026-11-25T19:56:59+00:00",
-      "last_attempt": "2026-11-25T19:56:59+00:00"
+      "last_success": "2026-11-26T01:53:14+00:00",
+      "last_attempt": "2026-11-26T01:53:14+00:00"
     },
     "analysis:NVDA": {
       "state": "ok",
-      "last_success": "2026-11-25T05:41:33+00:00",
-      "last_attempt": "2026-11-25T05:41:33+00:00"
+      "last_success": "2026-11-26T01:53:13+00:00",
+      "last_attempt": "2026-11-26T01:53:13+00:00"
     },
     "analysis:AAPL": {
       "state": "ok",
-      "last_success": "2026-11-25T05:41:34+00:00",
-      "last_attempt": "2026-11-25T05:41:34+00:00"
+      "last_success": "2026-11-26T01:53:14+00:00",
+      "last_attempt": "2026-11-26T01:53:14+00:00"
     },
     "production": {
       "state": "ok",
-      "last_success": "2026-11-25T05:41:34+00:00",
-      "last_attempt": "2026-11-25T05:41:34+00:00"
+      "last_success": "2026-11-26T01:53:14+00:00",
+      "last_attempt": "2026-11-26T01:53:14+00:00"
     },
     "sector": {
       "state": "ok",
-      "last_success": "2026-11-25T05:41:35+00:00",
-      "last_attempt": "2026-11-25T05:41:35+00:00"
+      "last_success": "2026-11-26T01:53:14+00:00",
+      "last_attempt": "2026-11-26T01:53:14+00:00"
     }
   }
 }
