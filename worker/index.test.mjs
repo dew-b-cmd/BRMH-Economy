@@ -70,6 +70,10 @@ test('authentication, provider outage and timeout never disclose the upstream cr
   for (const [upstream, status, code] of [
     [() => Response.json({ status: '010', message: env.OPENDART_API_KEY }), 502, 'source_auth_error'],
     [() => new Response('Unavailable', { status: 503 }), 502, 'source_unavailable'],
+    [(_url, options) => {
+      assert.equal(options.redirect, 'manual');
+      return Response.redirect('https://example.invalid/unexpected');
+    }, 502, 'source_unavailable'],
     [() => { throw new DOMException(env.OPENDART_API_KEY, 'TimeoutError'); }, 504, 'source_timeout'],
   ]) {
     const response = await gateway(upstream)('/v1/dart/filings?q=00126380');

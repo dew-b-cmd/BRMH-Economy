@@ -75,7 +75,7 @@ async function getJson(fetcher, url, provider, env, sizeLimit = 8_000_000, decod
   if (provider !== 'catalog' && !(await env.PROVIDER_LIMIT.limit({ key: provider })).success) throw limited();
   let response;
   try {
-    response = await fetcher(url, { headers, redirect: 'error', signal: AbortSignal.timeout(8_000) });
+    response = await fetcher(url, { headers, redirect: 'manual', signal: AbortSignal.timeout(8_000) });
   } catch (error) {
     if (error.name === 'TimeoutError' || error.name === 'AbortError') {
       throw timeoutError();

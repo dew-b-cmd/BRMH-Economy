@@ -44,6 +44,19 @@
         message: '공시 검색 서버에 연결하지 못했습니다. 아래 공식 사이트에서 확인해 주세요.' }, { status: 503 });
     }
     if (dart) return window.dartPagesRequest(apiParams, options.signal, true);
+    if (route === '/v1/sec/filings') {
+      const index = await window.secPagesRequest(apiParams, options.signal, Boolean(gatewayRoot));
+      if (index.ok) {
+        const payload = await index.json();
+        try {
+          const snapshot = await readSnapshot(options);
+          payload.annual = Object.values(snapshot.sec ?? {}).find(item => item.cik === payload.cik)?.annual ?? null;
+        } catch { payload.annual = null; }
+        payload.analysis_live_required = !payload.annual;
+        return Response.json(payload);
+      }
+      if (index.status < 500) return index;
+    }
     // Use a stored SEC result only for the exact issuer and default search.
     if (!apiParams.start && !apiParams.end && !apiParams.type && Number(apiParams.page || 1) === 1) {
       try {
@@ -61,6 +74,9 @@
         }
       } catch { /* Keep the gateway's error when the snapshot is unavailable. */ }
     }
+    if (!gatewayRoot && route === '/v1/sec/analysis') return Response.json({
+      status: 'error', source_url: source, message: '이 기업의 연간 실적 분석은 SEC 실시간 연결이 필요합니다.',
+    }, { status: 503 });
     return failure;
   }
   window.kronosPagesRequest = async (path, options = {}) => {

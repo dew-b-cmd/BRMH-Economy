@@ -74,11 +74,12 @@ jobs:
         run: |
           python scripts/build_disclosure_catalog.py
           python scripts/build_dart_search.py
+          python scripts/build_sec_search.py
       - name: Persist snapshot
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/economy.json data.js data/disclosure-catalog data/dart-recent
+          git add data/economy.json data.js data/disclosure-catalog data/dart-recent data/sec-recent
           if ! git diff --cached --quiet; then
             git commit -m 'Refresh economy snapshots'
             git push origin HEAD:main
@@ -93,6 +94,7 @@ jobs:
           cp data/economy.json _site/data/
           cp -R data/disclosure-catalog _site/data/
           cp -R data/dart-recent _site/data/
+          cp -R data/sec-recent _site/data/
           python - <<'PY'
           import os
           from pathlib import Path
@@ -146,6 +148,8 @@ jobs:
           grep -Fq 'kronos-pages.js' /tmp/economy-dashboard.html
           grep -Fq 'dart-pages.js' /tmp/economy-dashboard.html
           curl --fail --retry 5 --retry-all-errors "${PAGE_URL%/}/data/dart-recent/status.json?run=$GITHUB_RUN_ID" | python -m json.tool >/dev/null
+          grep -Fq 'sec-pages.js' /tmp/economy-dashboard.html
+          curl --fail --retry 5 --retry-all-errors "${PAGE_URL%/}/data/sec-recent/status.json?run=$GITHUB_RUN_ID" | python -m json.tool >/dev/null
           for provider in dart sec; do
             curl --fail --retry 5 --retry-all-errors "${PAGE_URL%/}/data/disclosure-catalog/$provider-updated.json?run=$GITHUB_RUN_ID" | python -m json.tool >/dev/null
           done

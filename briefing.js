@@ -168,7 +168,8 @@
         byId('sec-official').href = data.source_url || 'https://www.sec.gov/edgar/search/';
         selectedSecSymbol = data.cik;
         secAnalysisButton.disabled = !data.annual;
-        if (!data.annual && !data._refresh) byId('sec-analysis-status').textContent = '분석할 연차보고서를 찾지 못했습니다.';
+        if (data.analysis_live_required) byId('sec-analysis-status').textContent = '이 기업의 연간 실적 분석은 SEC 실시간 연결이 필요합니다.';
+        else if (!data.annual && !data._refresh) byId('sec-analysis-status').textContent = '분석할 연차보고서를 찾지 못했습니다.';
       });
     } finally { secSubmit.disabled = false; }
   }
