@@ -1,5 +1,5 @@
 {
-  "checked": "2026-11-27T19:28:41+00:00",
+  "checked": "2026-11-28T03:54:46+00:00",
   "exports": [
     {
       "hs_code": "8542",
@@ -83,7 +83,7 @@
     ],
     "start": "2026-11-22",
     "end": "2026-11-28",
-    "checked_at": "2026-11-28T04:28:38+09:00"
+    "checked_at": "2026-11-28T12:54:41+09:00"
   },
   "sec": {
     "NVDA": {
@@ -507,57 +507,57 @@
     "market": {
       "state": "cached",
       "last_success": "2026-11-27T04:15:32+00:00",
-      "last_attempt": "2026-11-27T19:28:39+00:00"
+      "last_attempt": "2026-11-28T03:54:43+00:00"
     },
     "forecast": {
       "state": "pending",
       "last_success": "2026-11-26T06:44:26+00:00",
-      "last_attempt": "2026-11-27T19:28:40+00:00"
+      "last_attempt": "2026-11-28T03:54:45+00:00"
     },
     "dart": {
       "state": "ok",
-      "last_success": "2026-11-27T19:28:37+00:00",
-      "last_attempt": "2026-11-27T19:28:37+00:00"
+      "last_success": "2026-11-28T03:54:40+00:00",
+      "last_attempt": "2026-11-28T03:54:40+00:00"
     },
     "exports:8542": {
       "state": "ok",
-      "last_success": "2026-11-27T04:15:26+00:00",
-      "last_attempt": "2026-11-27T04:15:26+00:00"
+      "last_success": "2026-11-28T03:54:36+00:00",
+      "last_attempt": "2026-11-28T03:54:36+00:00"
     },
     "exports:3304": {
       "state": "ok",
-      "last_success": "2026-11-27T04:15:28+00:00",
-      "last_attempt": "2026-11-27T04:15:28+00:00"
+      "last_success": "2026-11-28T03:54:38+00:00",
+      "last_attempt": "2026-11-28T03:54:38+00:00"
     },
     "sec:NVDA": {
       "state": "ok",
-      "last_success": "2026-11-27T19:28:38+00:00",
-      "last_attempt": "2026-11-27T19:28:38+00:00"
+      "last_success": "2026-11-28T03:54:41+00:00",
+      "last_attempt": "2026-11-28T03:54:41+00:00"
     },
     "sec:AAPL": {
       "state": "ok",
-      "last_success": "2026-11-27T19:28:38+00:00",
-      "last_attempt": "2026-11-27T19:28:38+00:00"
+      "last_success": "2026-11-28T03:54:41+00:00",
+      "last_attempt": "2026-11-28T03:54:41+00:00"
     },
     "analysis:NVDA": {
       "state": "ok",
-      "last_success": "2026-11-27T04:15:31+00:00",
-      "last_attempt": "2026-11-27T04:15:31+00:00"
+      "last_success": "2026-11-28T03:54:41+00:00",
+      "last_attempt": "2026-11-28T03:54:41+00:00"
     },
     "analysis:AAPL": {
       "state": "ok",
-      "last_success": "2026-11-27T04:15:31+00:00",
-      "last_attempt": "2026-11-27T04:15:31+00:00"
+      "last_success": "2026-11-28T03:54:41+00:00",
+      "last_attempt": "2026-11-28T03:54:41+00:00"
     },
     "production": {
       "state": "ok",
-      "last_success": "2026-11-27T04:15:31+00:00",
-      "last_attempt": "2026-11-27T04:15:31+00:00"
+      "last_success": "2026-11-28T03:54:42+00:00",
+      "last_attempt": "2026-11-28T03:54:42+00:00"
     },
     "sector": {
       "state": "ok",
-      "last_success": "2026-11-27T04:15:31+00:00",
-      "last_attempt": "2026-11-27T04:15:31+00:00"
+      "last_success": "2026-11-28T03:54:42+00:00",
+      "last_attempt": "2026-11-28T03:54:42+00:00"
     }
   }
 }
